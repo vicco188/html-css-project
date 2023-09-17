@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #191919;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  padding: 0px;
+}
+
+header {
+  background-color: #F0EFE9;
+}
+header .container {
+  height: 121px;
+  display: grid;
+  grid-template-columns: 70px auto;
+  padding-right: 70px;
+  grid-template-areas: "header-burgerbutton header-logo";
+}
+@media (min-width: 789px) {
+  header .container {
+    grid-template-columns: 225px auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas: "header-logo header-top" "header-logo header-bottom";
+    padding-right: 0px;
+    padding-left: 15px;
+  }
+}
+header .container .header-burgerbutton {
+  grid-area: header-burgerbutton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 789px) {
+  header .container .header-burgerbutton {
+    display: none;
+  }
+}
+header .container .header-logo {
+  display: flex;
+  grid-area: header-logo;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 789px) {
+  header .container .header-logo {
+    justify-content: left;
+    padding-left: 20px;
+  }
+}
+header .container .header-top {
+  display: none;
+  background-color: pink;
+  grid-area: header-top;
+}
+@media (min-width: 789px) {
+  header .container .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+header .container .header-bottom {
+  display: none;
+  background-color: aquamarine;
+  grid-area: header-bottom;
+}
+@media (min-width: 789px) {
+  header .container .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+main {
+  background-color: rgb(182, 252, 208);
+}
+
+footer {
+  background-color: #666666;
+}

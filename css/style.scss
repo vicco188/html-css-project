@@ -1,0 +1,82 @@
+* {
+    box-sizing:border-box; 
+    //border:solid 1px;  //debug only
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap');
+
+html, body {
+    color: #191919;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container{
+    padding: 0px; //Design file sometimes use the outer parts of the 1320 box, disabling padding as default.
+}
+header{
+    background-color: #F0EFE9;
+    .container{
+        height: 121px;
+        display: grid;
+        //border: 1px solid black; //debug only
+        grid-template-columns: 70px auto;
+        padding-right: 70px; //must be same as first column width in grid-template-columns in order to counter the burger button making logo uncentered.
+        grid-template-areas:
+            'header-burgerbutton header-logo';
+        @media(min-width: 789px){
+            grid-template-columns: 225px auto;
+            grid-template-rows:50px auto;
+            grid-template-areas:
+                'header-logo header-top'
+                'header-logo header-bottom';
+                padding-right: 0px;
+                padding-left: 15px;
+        }
+        .header-burgerbutton{
+            grid-area: header-burgerbutton;
+            //background-color: rgb(184, 128, 55); // debug only
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media(min-width: 789px){display: none;}
+        }
+        .header-logo{
+            display: flex;
+            grid-area: header-logo;
+            //background-color:#6dc9cf; //debug only
+            align-items: center;
+            justify-content: center;
+    
+            
+            @media(min-width: 789px){
+                justify-content: left;
+                padding-left:20px;
+            }
+        }
+        .header-top{
+            display: none;
+            background-color: pink; //debug only
+            @media(min-width: 789px){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            grid-area: header-top;
+        }
+        .header-bottom {
+            display: none;
+            background-color: aquamarine; //debug only
+            @media(min-width: 789px){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            grid-area: header-bottom;
+        }
+    }
+
+}
+main {
+    background-color: rgb(182, 252, 208);
+}
+footer{ background-color: #666666;}
