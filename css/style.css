@@ -43,7 +43,7 @@ h4 {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #F94D1C;
-  font-weight: 500;
+  font-weight: 900;
 }
 @media (min-width: 1200px) {
   h4 {
@@ -407,6 +407,126 @@ main .projects .projects-button {
   main .projects .projects-button {
     padding: 70px 0 90px 0;
   }
+}
+main .brand-display {
+  background-color: #FFFFFF;
+  padding-top: 18px;
+}
+@media (min-width: 768px) {
+  main .brand-display {
+    padding-top: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  main .brand-display {
+    padding-top: 72px;
+  }
+}
+main .brand-display .container-md {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
+main .brand-display .container-md img {
+  width: 20%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  main .brand-display .container-md img {
+    height: 100%;
+    width: auto;
+  }
+}
+main .features {
+  background-color: #FFFFFF;
+  padding-top: 200px;
+}
+main .features .features-wrp {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+  main .features .features-wrp {
+    grid-template-columns: 19fr 31fr;
+  }
+}
+main .features .features-wrp .features-left h4 {
+  margin-bottom: 25px;
+}
+main .features .features-wrp .features-left h2 {
+  margin-bottom: 40px;
+}
+main .features .features-wrp .features-left .btn-generic {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+@media (min-width: 992px) {
+  main .features .features-wrp .features-left .btn-generic {
+    width: 94%;
+  }
+}
+main .features .features-wrp .features-left .btn-generic a {
+  color: #191919;
+  text-decoration: none;
+}
+main .features .features-wrp .features-right {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+main .features .features-wrp .features-right .features-right-grid {
+  display: grid;
+  row-gap: 66px;
+  grid-template-columns: 1fr;
+  column-gap: 72px;
+}
+@media (min-width: 576px) {
+  main .features .features-wrp .features-right .features-right-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  main .features .features-wrp .features-right .features-right-grid {
+    column-gap: 144px;
+  }
+}
+@media (min-width: 992px) {
+  main .features .features-wrp .features-right .features-right-grid {
+    column-gap: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  main .features .features-wrp .features-right .features-right-grid {
+    column-gap: 72px;
+  }
+}
+@media (min-width: 1400px) {
+  main .features .features-wrp .features-right .features-right-grid {
+    column-gap: 144px;
+  }
+}
+main .features .features-wrp .features-right .features-right-grid .features-right-card {
+  padding-bottom: 0;
+  width: 80vw;
+}
+@media (min-width: 576px) {
+  main .features .features-wrp .features-right .features-right-grid .features-right-card {
+    width: 227px;
+  }
+}
+main .features .features-wrp .features-right .features-right-grid .features-right-card p {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+main .features .features-wrp .features-right .features-right-grid .features-right-card .features-right-card-heading {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 23px;
 }
 
 footer {

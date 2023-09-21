@@ -1,5 +1,8 @@
-$mobile-breakpoint-width: 768px;
-$reduced-breakpoint-width: 1200px;
+$small-breakpoint-width: 576px;
+$medium-breakpoint-width: 768px;
+$large-breakpoint-width: 992px;
+$xlarge-breakpoint-width: 1200px;
+$xxlarge-breakpoint-width: 1400px;
 $hover-color: #aaaaaa;
 $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
@@ -9,7 +12,7 @@ $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
 * {
     box-sizing:border-box; 
-    //border:solid 1px;  //debug only
+    // border:solid 1px;  //debug only
 }
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap');
 
@@ -25,10 +28,10 @@ h1{
     font-weight: 900;
     font-size: 50px;
     padding: 0 10px 0 10px;
-    @media (min-width: $mobile-breakpoint-width){
+    @media (min-width: $medium-breakpoint-width){
         font-size: 60px;
     }
-    @media (min-width: $reduced-breakpoint-width){
+    @media (min-width: $xlarge-breakpoint-width){
         font-size: 86px;
         //padding: 0px;
     }
@@ -37,14 +40,14 @@ h2{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 35px;
-    @media(min-width: $reduced-breakpoint-width){font-size: 45px;}
+    @media(min-width: $xlarge-breakpoint-width){font-size: 45px;}
 }
 h4 {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    @media(min-width: $reduced-breakpoint-width){font-size: 18px;}
+    @media(min-width: $xlarge-breakpoint-width){font-size: 18px;}
     color: #F94D1C;
-    font-weight: 500;
+    font-weight: 900;
 }
 h6{
     font-family: 'DM Sans', sans-serif;
@@ -68,7 +71,7 @@ p{
     border-radius: 26px;
     font-weight: 500;
     font-size: 14px;
-    @media (min-width: $mobile-breakpoint-width){
+    @media (min-width: $medium-breakpoint-width){
         font-size: inherit;
     }
     i {
@@ -112,7 +115,7 @@ header{
     //padding-right:19px;
     .header-wrp{
         height: 100px;
-        @media(min-width: $mobile-breakpoint-width){height: 121px;}
+        @media(min-width: $medium-breakpoint-width){height: 121px;}
         display: grid;
         //border: 1px solid black; //debug only
         grid-template-columns: 70px auto;
@@ -120,7 +123,7 @@ header{
         padding-right: 70px; //must be same as first column width in grid-template-columns in order to counter the burger button making logo uncentered.
         grid-template-areas:
             'header-burgerbutton header-logo';
-        @media(min-width: $mobile-breakpoint-width){
+        @media(min-width: $medium-breakpoint-width){
             grid-template-columns: 208px auto;
             grid-template-rows:50px auto;
             grid-template-areas:
@@ -136,7 +139,7 @@ header{
             align-items: center;
             justify-content: center;
             margin-top: 5px;
-            @media(min-width: $mobile-breakpoint-width){display: none;}
+            @media(min-width: $medium-breakpoint-width){display: none;}
         }
         .header-logo{
             display: flex;
@@ -144,22 +147,22 @@ header{
             //background-color:#6dc9cf; //debug only
             align-items: center;
             justify-content: center;
-            @media(min-width: $mobile-breakpoint-width){justify-content: left;}
+            @media(min-width: $medium-breakpoint-width){justify-content: left;}
         }
         .header-top{
             //background-color: pink; //debug only
             display: none;            
-            @media(min-width: $mobile-breakpoint-width){display: flex;}
+            @media(min-width: $medium-breakpoint-width){display: flex;}
             justify-content: space-between;
             //justify-content: flex-end;
-            //@media(min-width: $reduced-breakpoint-width){justify-content: space-between;}
+            //@media(min-width: $xlarge-breakpoint-width){justify-content: space-between;}
             align-items: center;
             border-bottom: $grey-border;
             grid-area: header-top;
             .header-top-contactinfo{
                         display:flex;
                 // display: none;
-                // @media(min-width: $reduced-breakpoint-width){display:flex;}
+                // @media(min-width: $xlarge-breakpoint-width){display:flex;}
                 font-size: 13.5px;
                 font-weight: 300;
                 a {
@@ -178,7 +181,7 @@ header{
                     }
                     &#lastcontact{
                         display: none;
-                        @media(min-width: $reduced-breakpoint-width){display: block;}                        
+                        @media(min-width: $xlarge-breakpoint-width){display: block;}                        
                     }
                     i {padding-right: 8px;}                    
                 }
@@ -196,11 +199,11 @@ header{
         .header-bottom {
             //background-color: aquamarine; //debug only
             display: none;
-            @media(min-width: $mobile-breakpoint-width){display: flex;}
+            @media(min-width: $medium-breakpoint-width){display: flex;}
             justify-content: space-between;
             align-items: flex-end;
             // align-items:center;
-            // @media(min-width: $reduced-breakpoint-width){align-items: end;}
+            // @media(min-width: $xlarge-breakpoint-width){align-items: end;}
             grid-area: header-bottom;
             nav{
                 width: 300px;
@@ -243,17 +246,17 @@ main {
             //background-color: #96ff8d; //debug only
             display: flex;
             padding:20px 0 0 0;
-            @media(min-width: $reduced-breakpoint-width){padding: 0;}
+            @media(min-width: $xlarge-breakpoint-width){padding: 0;}
             .showcase-content{
                 gap: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // @media(min-width: $mobile-breakpoint-width){padding-left:25px;}
+                // @media(min-width: $medium-breakpoint-width){padding-left:25px;}
                 // @media(min-width: 1300px){padding-left:inherit;}
                 h1{
                     text-align: center;
-                    @media (min-width: $reduced-breakpoint-width){text-align:inherit;}
+                    @media (min-width: $xlarge-breakpoint-width){text-align:inherit;}
                 }
                 .showcase-paragraph{
                     font-family: 'Inter', sans-serif;
@@ -261,7 +264,7 @@ main {
                     font-size: 20px;
                     padding: 0 10px 0 10px;
                     text-align: center;
-                    @media (min-width: $reduced-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint-width){
                         text-align:inherit;
                         padding: 0px;
                     }
@@ -270,7 +273,7 @@ main {
                     display: flex;
                     gap: 20px;
                     justify-content: center;
-                    @media (min-width: $reduced-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint-width){
                         justify-content: flex-start;
                     }
                 } 
@@ -279,7 +282,7 @@ main {
                 position: relative;
                 .showcase-picture-main{
                     display: none;
-                    @media (min-width: $reduced-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint-width){
                         display: block;
                         padding-right:100px;
                         padding-top: 50px;
@@ -292,7 +295,7 @@ main {
                     top: 375px;
                     display: none;
                     
-                    @media(min-width: $reduced-breakpoint-width){display:block;}
+                    @media(min-width: $xlarge-breakpoint-width){display:block;}
                 }
             }
         }
@@ -309,16 +312,16 @@ main {
         background-color: $white-bg;
         h4{
             padding-top: 32px;
-            @media(min-width: $reduced-breakpoint-width){margin-top: 124px;}
+            @media(min-width: $xlarge-breakpoint-width){margin-top: 124px;}
         }
         h2{
             margin-bottom: 32px;
-             @media(min-width: $reduced-breakpoint-width){margin-bottom:86px;}
+             @media(min-width: $xlarge-breakpoint-width){margin-bottom:86px;}
         }
         .projects-grid{
             display: grid;
             grid-template-columns: 1fr;
-            @media(min-width: $reduced-breakpoint-width){grid-template-columns: 1fr 1fr;}
+            @media(min-width: $xlarge-breakpoint-width){grid-template-columns: 1fr 1fr;}
             gap: 30px;
             .projects-grid-card{
                 color: $black-font-color;
@@ -336,7 +339,7 @@ main {
                     padding-bottom: 12px;
                     padding-top: 12px;
                     margin-bottom: 12px;
-                    @media(min-width: $reduced-breakpoint-width){
+                    @media(min-width: $xlarge-breakpoint-width){
                         padding-top: 38px;
                         margin-bottom: 38px;
                     }
@@ -359,7 +362,92 @@ main {
             display:flex;
             justify-content: center;
             padding: 10px 0 40px 0;
-            @media(min-width: $reduced-breakpoint-width){padding: 70px 0 90px 0;}
+            @media(min-width: $xlarge-breakpoint-width){padding: 70px 0 90px 0;}
+        }
+    }
+    .brand-display{
+        background-color: $white-bg;
+        padding-top: 18px;
+        @media(min-width: $medium-breakpoint-width){padding-top: 36px;}
+        @media(min-width:$xlarge-breakpoint-width){padding-top: 72px;}
+        .container-md{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0;
+            padding-right:0;
+            img {
+                width: 20%;
+                height: auto;
+                @media(min-width: $xlarge-breakpoint-width){
+                    height: 100%;
+                    width: auto;        
+                }
+            }
+        }
+    }
+    .features{
+        background-color: $white-bg;
+        padding-top: 200px;
+        .features-wrp{
+            display: grid;
+            grid-template-columns: 1fr;
+            @media(min-width: $large-breakpoint-width){grid-template-columns: 19fr 31fr;}
+            
+            .features-left{
+                h4{
+                    margin-bottom: 25px;
+                }
+                h2{
+                    margin-bottom: 40px;
+                }
+                .btn-generic{
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                    @media(min-width: $large-breakpoint-width){width: 94%;}
+                    a{
+                        color: $black-font-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .features-right{
+                display: flex;
+                justify-content: center;
+                padding-top: 35px;
+                .features-right-grid{
+                    display: grid;
+                    
+                    row-gap: 66px;
+                    grid-template-columns: 1fr;
+                    @media(min-width: $small-breakpoint-width){grid-template-columns: 1fr 1fr;}
+                    column-gap: 72px;
+                    @media(min-width: $medium-breakpoint-width){column-gap: 144px;}
+                    @media(min-width: $large-breakpoint-width){column-gap: 36px;}
+                    @media(min-width: $xlarge-breakpoint-width){column-gap: 72px;}
+                    @media(min-width: $xxlarge-breakpoint-width){column-gap: 144px;}
+                    .features-right-card{
+                    padding-bottom: 0;
+                    width: 80vw;
+                    @media(min-width: $small-breakpoint-width){width: 227px;}
+                    p{
+                        margin-bottom: 0;
+                        font-weight: 300;
+                        font-size:15px;
+                    }
+                    .features-right-card-heading{
+                            font-family: 'DM Sans', sans-serif;
+                            font-weight: 900;
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            margin-top: 23px;
+                    }
+                }
+                }
+                    
+                
+            }
+
         }
     }
 }
