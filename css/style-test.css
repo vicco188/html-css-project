@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap");
 * {
   box-sizing: border-box;
+  border: solid 1px;
 }
 
 html, body {
   color: #191919;
-  background-color: #F0EFE9;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -17,12 +17,12 @@ h1 {
   font-size: 50px;
   padding: 0 10px 0 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   h1 {
     font-size: 60px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   h1 {
     font-size: 86px;
   }
@@ -31,24 +31,14 @@ h1 {
 h2 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 35px;
-}
-@media (min-width: 1200px) {
-  h2 {
-    font-size: 45px;
-  }
+  font-size: 45px;
 }
 
 h4 {
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #F94D1C;
   font-weight: 500;
-}
-@media (min-width: 1200px) {
-  h4 {
-    font-size: 18px;
-  }
 }
 
 h6 {
@@ -75,7 +65,7 @@ p {
   font-weight: 500;
   font-size: 14px;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .btn-generic {
     font-size: inherit;
   }
@@ -90,10 +80,6 @@ p {
 }
 .btn-generic.btn-transparent {
   background-color: transparent;
-  border: 1px solid #191919;
-}
-.btn-generic.btn-grey {
-  background-color: #F0EFE9;
   border: 1px solid #191919;
 }
 .btn-generic.btn-black {
@@ -123,12 +109,12 @@ header .header-wrp {
   padding-right: 70px;
   grid-template-areas: "header-burgerbutton header-logo";
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp {
     height: 121px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp {
     grid-template-columns: 208px auto;
     grid-template-rows: 50px auto;
@@ -144,7 +130,7 @@ header .header-wrp .header-burgerbutton {
   justify-content: center;
   margin-top: 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp .header-burgerbutton {
     display: none;
   }
@@ -155,27 +141,37 @@ header .header-wrp .header-logo {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp .header-logo {
     justify-content: left;
   }
 }
 header .header-wrp .header-top {
   display: none;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   border-bottom: 2px solid #DAD9D3;
   grid-area: header-top;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp .header-top {
     display: flex;
   }
 }
+@media (min-width: 1018px) {
+  header .header-wrp .header-top {
+    justify-content: space-between;
+  }
+}
 header .header-wrp .header-top .header-top-contactinfo {
-  display: flex;
+  display: none;
   font-size: 13.5px;
   font-weight: 300;
+}
+@media (min-width: 1018px) {
+  header .header-wrp .header-top .header-top-contactinfo {
+    display: flex;
+  }
 }
 header .header-wrp .header-top .header-top-contactinfo a {
   color: #191919;
@@ -194,14 +190,6 @@ header .header-wrp .header-top .header-top-contactinfo .header-top-contactinfo-c
   padding-left: 0;
   margin-left: 0;
 }
-header .header-wrp .header-top .header-top-contactinfo .header-top-contactinfo-contact#lastcontact {
-  display: none;
-}
-@media (min-width: 1200px) {
-  header .header-wrp .header-top .header-top-contactinfo .header-top-contactinfo-contact#lastcontact {
-    display: block;
-  }
-}
 header .header-wrp .header-top .header-top-contactinfo .header-top-contactinfo-contact i {
   padding-right: 8px;
 }
@@ -215,12 +203,17 @@ header .header-wrp .header-top .header-top-somedicons a:hover {
 header .header-wrp .header-bottom {
   display: none;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   grid-area: header-bottom;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header .header-wrp .header-bottom {
     display: flex;
+  }
+}
+@media (min-width: 1018px) {
+  header .header-wrp .header-bottom {
+    align-items: end;
   }
 }
 header .header-wrp .header-bottom nav {
@@ -253,21 +246,16 @@ header .header-wrp .header-bottom nav a:hover::before {
 }
 
 main .showcase {
-  position: relative;
   background-color: #F0EFE9;
-  z-index: 0;
 }
 main .showcase .showcase-wrp {
   display: flex;
-  padding: 20px 0 0 0;
-}
-@media (min-width: 1200px) {
-  main .showcase .showcase-wrp {
-    padding: 0;
-  }
+  padding: 0;
+  position: relative;
+  z-index: 0;
 }
 main .showcase .showcase-wrp .showcase-content {
-  gap: 10px;
+  gap: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,7 +263,7 @@ main .showcase .showcase-wrp .showcase-content {
 main .showcase .showcase-wrp .showcase-content h1 {
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .showcase .showcase-wrp .showcase-content h1 {
     text-align: inherit;
   }
@@ -287,10 +275,14 @@ main .showcase .showcase-wrp .showcase-content .showcase-paragraph {
   padding: 0 10px 0 10px;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
+  main .showcase .showcase-wrp .showcase-content .showcase-paragraph {
+    padding: 0px;
+  }
+}
+@media (min-width: 1018px) {
   main .showcase .showcase-wrp .showcase-content .showcase-paragraph {
     text-align: inherit;
-    padding: 0px;
   }
 }
 main .showcase .showcase-wrp .showcase-content .showcase-content-buttons {
@@ -298,22 +290,29 @@ main .showcase .showcase-wrp .showcase-content .showcase-content-buttons {
   gap: 20px;
   justify-content: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .showcase .showcase-wrp .showcase-content .showcase-content-buttons {
     justify-content: flex-start;
   }
 }
 main .showcase .showcase-wrp .showcase-picture {
   position: relative;
+  z-index: 0;
 }
 main .showcase .showcase-wrp .showcase-picture .showcase-picture-main {
-  display: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+  right: 100%;
+  z-index: -1;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .showcase .showcase-wrp .showcase-picture .showcase-picture-main {
-    display: block;
+    position: static;
     padding-right: 100px;
     padding-top: 50px;
+    height: 100%;
+    width: auto;
   }
 }
 main .showcase .showcase-wrp .showcase-picture .showcase-picture-squiggle {
@@ -322,26 +321,19 @@ main .showcase .showcase-wrp .showcase-picture .showcase-picture-squiggle {
   top: 375px;
   display: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .showcase .showcase-wrp .showcase-picture .showcase-picture-squiggle {
     display: block;
   }
-}
-main .showcase .showcase-white-squiggle {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  z-index: -1;
-  width: min(100%, 70vw);
 }
 main .projects {
   text-align: center;
   background-color: #FFFFFF;
 }
 main .projects h4 {
-  padding-top: 32px;
+  margin-top: 32px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .projects h4 {
     margin-top: 124px;
   }
@@ -349,7 +341,7 @@ main .projects h4 {
 main .projects h2 {
   margin-bottom: 32px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .projects h2 {
     margin-bottom: 86px;
   }
@@ -359,7 +351,7 @@ main .projects .projects-grid {
   grid-template-columns: 1fr;
   gap: 30px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .projects .projects-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -381,7 +373,7 @@ main .projects .projects-grid .projects-grid-card h6 {
   padding-top: 12px;
   margin-bottom: 12px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .projects .projects-grid .projects-grid-card h6 {
     padding-top: 38px;
     margin-bottom: 38px;
@@ -403,7 +395,7 @@ main .projects .projects-button {
   justify-content: center;
   padding: 10px 0 40px 0;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1018px) {
   main .projects .projects-button {
     padding: 70px 0 90px 0;
   }

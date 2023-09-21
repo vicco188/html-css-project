@@ -1,5 +1,5 @@
-$mobile-breakpoint-width: 768px;
-$reduced-breakpoint-width: 1200px;
+$mobile-breakpoint-width: 700px;
+$reduced-breakpoint-width: 1018px;
 $hover-color: #aaaaaa;
 $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
@@ -9,13 +9,12 @@ $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
 * {
     box-sizing:border-box; 
-    //border:solid 1px;  //debug only
+    border:solid 1px;  //debug only
 }
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap');
 
 html, body {
     color: $black-font-color;
-    background-color: $grey-bg;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -36,13 +35,11 @@ h1{
 h2{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 35px;
-    @media(min-width: $reduced-breakpoint-width){font-size: 45px;}
+    font-size: 45px;
 }
 h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    @media(min-width: $reduced-breakpoint-width){font-size: 18px;}
+    font-size: 18px;
     color: #F94D1C;
     font-weight: 500;
 }
@@ -82,10 +79,6 @@ p{
     }
     &.btn-transparent {
         background-color: transparent;
-        border: 1px solid $black-font-color;
-    }
-    &.btn-grey {
-        background-color: $grey-bg;
         border: 1px solid $black-font-color;
     }
     &.btn-black {
@@ -150,16 +143,15 @@ header{
             //background-color: pink; //debug only
             display: none;            
             @media(min-width: $mobile-breakpoint-width){display: flex;}
-            justify-content: space-between;
-            //justify-content: flex-end;
-            //@media(min-width: $reduced-breakpoint-width){justify-content: space-between;}
+            //justify-content: space-between;
+            justify-content: flex-end;
+            @media(min-width: $reduced-breakpoint-width){justify-content: space-between;}
             align-items: center;
             border-bottom: $grey-border;
             grid-area: header-top;
             .header-top-contactinfo{
-                        display:flex;
-                // display: none;
-                // @media(min-width: $reduced-breakpoint-width){display:flex;}
+                display: none;
+                @media(min-width: $reduced-breakpoint-width){display:flex;}
                 font-size: 13.5px;
                 font-weight: 300;
                 a {
@@ -175,10 +167,6 @@ header{
                         border-left: none;
                         padding-left: 0;
                         margin-left: 0;
-                    }
-                    &#lastcontact{
-                        display: none;
-                        @media(min-width: $reduced-breakpoint-width){display: block;}                        
                     }
                     i {padding-right: 8px;}                    
                 }
@@ -198,9 +186,8 @@ header{
             display: none;
             @media(min-width: $mobile-breakpoint-width){display: flex;}
             justify-content: space-between;
-            align-items: flex-end;
-            // align-items:center;
-            // @media(min-width: $reduced-breakpoint-width){align-items: end;}
+            align-items:center;
+            @media(min-width: $reduced-breakpoint-width){align-items: end;}
             grid-area: header-bottom;
             nav{
                 width: 300px;
@@ -235,22 +222,20 @@ header{
 }
 main {
     .showcase{
-        position: relative;
         background-color:$grey-bg;
         //background-color: #ffe760; // debug only
-        z-index: 0;
+    
         .showcase-wrp{
             //background-color: #96ff8d; //debug only
             display: flex;
-            padding:20px 0 0 0;
-            @media(min-width: $reduced-breakpoint-width){padding: 0;}
+            padding:0;
+            position: relative;
+            z-index: 0;
             .showcase-content{
-                gap: 10px;
+                gap: 30px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // @media(min-width: $mobile-breakpoint-width){padding-left:25px;}
-                // @media(min-width: 1300px){padding-left:inherit;}
                 h1{
                     text-align: center;
                     @media (min-width: $reduced-breakpoint-width){text-align:inherit;}
@@ -260,11 +245,9 @@ main {
                     font-weight: 300;
                     font-size: 20px;
                     padding: 0 10px 0 10px;
+                    @media (min-width: $reduced-breakpoint-width){padding: 0px;}
                     text-align: center;
-                    @media (min-width: $reduced-breakpoint-width){
-                        text-align:inherit;
-                        padding: 0px;
-                    }
+                    @media (min-width: $reduced-breakpoint-width){text-align:inherit;}
                 }
                 .showcase-content-buttons{
                     display: flex;
@@ -277,38 +260,36 @@ main {
             }
             .showcase-picture{
                 position: relative;
+                z-index:0;
                 .showcase-picture-main{
-                    display: none;
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    right: 100%;
+                    z-index: -1;
                     @media (min-width: $reduced-breakpoint-width){
-                        display: block;
+                        position: static;
                         padding-right:100px;
                         padding-top: 50px;
+                        height: 100%;
+                        width: auto;
                     }
                 }
                 .showcase-picture-squiggle{
                     position:absolute;
                     right: -65px;
-                    //left: 446px;
                     top: 375px;
                     display: none;
-                    
                     @media(min-width: $reduced-breakpoint-width){display:block;}
                 }
             }
-        }
-        .showcase-white-squiggle{
-            position: absolute;
-            bottom: 0;
-            display: block;
-            z-index: -1;
-            width: min(100%, 70vw);
         }
     }
     .projects{
         text-align: center;
         background-color: $white-bg;
         h4{
-            padding-top: 32px;
+            margin-top: 32px;
             @media(min-width: $reduced-breakpoint-width){margin-top: 124px;}
         }
         h2{
