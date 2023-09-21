@@ -10,30 +10,96 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="container">
+            <div class="container-xl header-wrp">
                 <div class="header-burgerbutton"><i class="fa-solid fa-bars fa-xl"></i></div>
-                <div class="header-logo"><img src="images/logo.svg" alt="Crito logotype"></div>
+                <div class="header-logo"><a href="index.html"><img src="images/logo.svg" alt="Crito logotype"></a></div>
                 <div class="header-top">
-                    <div class="header-top-contactinfo">CONTACTS</div>
-                    <div class="header-top-somedicons">SOMED ICONS</div>
+                    <div class="header-top-contactinfo">
+                        <div class="header-top-contactinfo-contact" id="firstcontact"><a href="tel:+46734189532"><i class="fa-regular fa-phone-volume fa-lg"></i>+46 (8) 121 470 50</a></div>
+                        <div class="header-top-contactinfo-contact"><a href="mailto:info@crito.com"><i class="fa-regular fa-envelope-dot fa-lg"></i>info@crito.com</a></div>
+                        <div class="header-top-contactinfo-contact" ><a href="https://www.google.com/maps/place/Sveav%C3%A4gen+31,+111+34+Stockholm"><i class="fa-sharp fa-light fa-location-dot fa-lg"></i>Sveavägen 31, 111 34 STOCKHOLM</a></div>
+                    </div>
+                    <div class="header-top-somedicons">
+                        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="header-bottom">
-                    
-                    <div class="header-bottom-menu">NAV</div>
-                    <div class="header-bottom-loginbutton">LOGIN-BUTTON</div>
+                    <nav>
+                        <a href="index.html" class="current-nav">Home</a>
+                        <a href="service.html">Service</a>
+                        <a href="news.html">News</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <div class="header-bottom-loginbutton"><a href="login.html" class="btn-generic btn-yellow">Login<i class="fa-regular fa-arrow-up-right"></i></a></div>
                 </div>
             </div>
         </header>
         <main>
-            <section class="container showcase">
-                SHOWCASE
+            <section class="showcase">
+                <div class="container-xl showcase-wrp">
+                    <div class="showcase-content">
+                        <h1>We Provide The Best Business Solutions</h1>
+                        <p class="showcase-paragraph">Establish your vision and value proposition and turn them into testable prototypes.</p>
+                        <div class="showcase-content-buttons">
+                            <a href="get-consulting.html" class="btn-generic btn-yellow">Get Consulting<i class="fa-regular fa-arrow-up-right"></i></a>
+                            <a href="learn-more.html" class="btn-generic btn-transparent">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="showcase-picture"><img src="images/tablet-man.svg" alt="Office worker"></div>
+                </div>
+            </section>
+            <div style="height: 200px; background-color: bisque;"></div>
+            <section class="container-xl projects">
+                <div class="section-title">
+                    <h4>Project & Case studies</h4>
+                    <h2>Let's Look At Our Global Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <a href="#" class="projects-grid-card">
+                        <img src="images/image-3.png" alt="Business">
+                        <h6>Grow your business</h6>
+                        <p class="readmorelink">
+                            Read more
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                        </p>
+                    </a>
+                    <a href="#" class="projects-grid-card">
+                        <img src="images/image-5.png" alt="Responsiveness">
+                        <h6>Why your client nees a responsive website</h6>
+                        <p class="readmorelink">
+                            Read more
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                        </p>
+                    </a>
+                    <a href="#" class="projects-grid-card">
+                        <img src="images/image-4.png" alt="Education">
+                        <h6>Educate your employees to get better results</h6>
+                        <p class="readmorelink">
+                            Read more
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                        </p>
+                    </a>
+                    <a href="#" class="projects-grid-card">
+                        <img src="images/image-6.png" alt="Statistics">
+                        <h6>Business Insights is an important piece of your business</h6>
+                        <p class="readmorelink">
+                            Read more
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                        </p>
+                    </a>
+                </div>
+                <div class="projects-button">
+                    <a href="projects.html" class="btn-generic btn-black">All recent projects<i class="fa-regular fa-arrow-up-right"></i></a>
+                </div>
             </section>
         </main>
         <footer>
-            FOOTER
+            <br>FOOTER
         </footer>
     </div>
-    
     <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
 </body>
 </html>
