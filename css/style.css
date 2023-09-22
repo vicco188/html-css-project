@@ -451,9 +451,6 @@ main .features .features-wrp {
     grid-template-columns: 19fr 31fr;
   }
 }
-main .features .features-wrp .features-left h4 {
-  margin-bottom: 25px;
-}
 main .features .features-wrp .features-left h2 {
   margin-bottom: 40px;
 }
