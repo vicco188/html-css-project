@@ -96,19 +96,45 @@ p{
         border: 1px solid $black-font-color;
         color: #FFFFFF;
     }
+    &.btn-white {
+        background-color: $white-font-color;
+        border: 1px solid $black-font-color;
+    }
     &:hover{
         background-color:$hover-color;
         border-color:$hover-color;
         color: #ffffff;
     }
 }
-.section-title{
-    text-align: center; @media(min-width: $large-breakpoint-width){text-align:inherit;}
+.section-title{//h2+h4
+    
     h4{
         margin-bottom:15px;
         @media(min-width: $large-breakpoint-width){margin-bottom:25px;}
     }
     
+}
+
+.info-card{
+    padding-bottom: 0;
+    p{
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size:15px;
+    }
+    .info-card-heading{
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 900;
+            font-size: 21px;
+            margin-bottom: 10px;
+            margin-top: 23px;
+    }
+    .btn-generic{
+        width: 52px;
+        padding: 2px 2px 0 0;
+        
+        
+    }
 }
 
 header{
@@ -245,7 +271,7 @@ main {
         .showcase-wrp{
             //background-color: #96ff8d; //debug only
             display: flex;
-            padding:20px 0 0 0;
+            padding:20px 0 20px 0;
             @media(min-width: $xlarge-breakpoint-width){padding: 0;}
             .showcase-content{
                 gap: 10px;
@@ -310,7 +336,8 @@ main {
     .projects{
         background-color: $white-bg;
         .projects-wrp{
-            text-align: center;
+            
+            @media(min-width: $large-breakpoint-width){text-align: center;}
             h4{
                 padding-top: 32px;
                 @media(min-width: $xlarge-breakpoint-width){margin-top: 124px;}
@@ -375,11 +402,16 @@ main {
         .container-md{
             display: flex;
             justify-content: space-between;
-            padding-left: 0;
-            padding-right:0;
+            padding-left: 20px;
+            padding-right:20px;
+            @media(min-width: $xlarge-breakpoint-width){
+                padding-left: 40px;
+                padding-right:40px;
+            }
             img {
-                width: 20%;
+                width: 17%;
                 height: auto;
+                @media(min-width: $small-breakpoint-width){width:15%;}
                 @media(min-width: $xlarge-breakpoint-width){
                     height: 100%;
                     width: auto;        
@@ -393,6 +425,7 @@ main {
         
         .features-wrp{
                 position:relative;
+                z-index: 0;
                 .grey-rectangle{
                     border: 1px solid #D1D1D1;
                     position: absolute;
@@ -402,6 +435,7 @@ main {
                     display:none;
                     @media(min-width: 800px){display: block;}
                     @media(min-width: 1600px){left: -100px; right: -100px;}
+                    z-index: -1;
                 }
                 padding-top: 80px;
                 padding-bottom: 100px;
@@ -414,14 +448,21 @@ main {
                     margin-bottom: 40px;
                     
                 }
-                .btn-generic{
+                .features-button{
                     display: flex;
-                    justify-content: center;
-                    width: auto;
-                    @media(min-width: $large-breakpoint-width){width: 94%;}
-                    a{
-                        color: $black-font-color;
-                        text-decoration: none;
+                    padding-left: 20px;
+                    @media(min-width: $large-breakpoint-width){padding-left: 0;}
+                    .btn-generic{
+                        display: flex;
+                        justify-content: center;
+
+                        width: 250px;
+                        
+                        @media(min-width: $large-breakpoint-width){width: 94%;}
+                        a{
+                            color: $black-font-color;
+                            text-decoration: none;
+                        }
                     }
                 }
             }
@@ -440,23 +481,11 @@ main {
                     @media(min-width: $large-breakpoint-width){column-gap: 36px;}
                     @media(min-width: $xlarge-breakpoint-width){column-gap: 72px;}
                     @media(min-width: $xxlarge-breakpoint-width){column-gap: 144px;}
-                    .features-right-card{
-                        padding-bottom: 0;
+                    .info-card{
                         width: 80vw;
                         position:relative;
                         @media(min-width: $small-breakpoint-width){width: 227px;}
-                        p{
-                            margin-bottom: 0;
-                            font-weight: 300;
-                            font-size:15px;
-                        }
-                        .features-right-card-heading{
-                                font-family: 'DM Sans', sans-serif;
-                                font-weight: 900;
-                                font-size: 20px;
-                                margin-bottom: 10px;
-                                margin-top: 23px;
-                        }
+                        
                         .icon-sparkles-a{
                             position: absolute;
                             left: 15px;
@@ -478,6 +507,57 @@ main {
                 
             }
 
+        }
+    }
+    .services{
+        background-color: $grey-bg;
+        .services-wrp{             
+            padding: 0 12px;
+            @media(min-width $medium-breakpoint-width){padding: 0;}
+            .section-title{}
+            .services-grid{
+                display: grid;
+                
+                gap: 15px;
+                padding:20px;
+                grid-template-columns: minmax(200px, 1fr);
+                @media(min-width: $small-breakpoint-width){
+                    grid-template-columns: repeat(2, minmax(200px, 1fr));
+                    gap:20px;
+
+                }
+                @media(min-width: $large-breakpoint-width){
+                    grid-template-columns: repeat(4, minmax(200px, 1fr));
+                    padding:0;
+                }
+                @media(min-width: $xlarge-breakpoint-width){
+                    gap:30px;
+                }
+                .info-card{
+                    background-color: $white-bg;
+                    &.info-card-highlighted{
+                        background-color: #F9D783;
+                    }
+                    padding: 30px 30px;
+                    @media(min-width: $xlarge-breakpoint-width){padding: 48px 30px;}
+                    .info-card-line{
+                        width:39px;
+                        border: 1px solid $black-font-color;
+                    }
+                    .info-card-heading{
+                        margin-top:28px;
+                    }
+                    .service-button{
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top:20px;
+                        .btn-white{
+                            border:none;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
