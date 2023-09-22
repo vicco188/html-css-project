@@ -441,22 +441,38 @@ main {
                     @media(min-width: $xlarge-breakpoint-width){column-gap: 72px;}
                     @media(min-width: $xxlarge-breakpoint-width){column-gap: 144px;}
                     .features-right-card{
-                    padding-bottom: 0;
-                    width: 80vw;
-                    @media(min-width: $small-breakpoint-width){width: 227px;}
-                    p{
-                        margin-bottom: 0;
-                        font-weight: 300;
-                        font-size:15px;
+                        padding-bottom: 0;
+                        width: 80vw;
+                        position:relative;
+                        @media(min-width: $small-breakpoint-width){width: 227px;}
+                        p{
+                            margin-bottom: 0;
+                            font-weight: 300;
+                            font-size:15px;
+                        }
+                        .features-right-card-heading{
+                                font-family: 'DM Sans', sans-serif;
+                                font-weight: 900;
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                                margin-top: 23px;
+                        }
+                        .icon-sparkles-a{
+                            position: absolute;
+                            left: 15px;
+                            top: -6px;
+                        }
+                        .icon-sparkles-b{
+                            position: absolute;
+                            left: 38px;
+                            top: -2px;
+                        }
+                        .icon-sparkles-c{
+                            position: absolute;
+                            left: 46px;
+                            top: 10px;
+                        }
                     }
-                    .features-right-card-heading{
-                            font-family: 'DM Sans', sans-serif;
-                            font-weight: 900;
-                            font-size: 20px;
-                            margin-bottom: 10px;
-                            margin-top: 23px;
-                    }
-                }
                 }
                     
                 
