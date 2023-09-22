@@ -25,20 +25,20 @@ html, body {
 }
 h1{
     font-family: 'DM Sans', sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 50px;
     padding: 0 10px 0 10px;
     @media (min-width: $medium-breakpoint-width){
         font-size: 60px;
     }
     @media (min-width: $xlarge-breakpoint-width){
-        font-size: 86px;
+        font-size: 96px;
         //padding: 0px;
     }
 }
 h2{
     font-family: 'DM Sans', sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 35px;
     @media(min-width: $xlarge-breakpoint-width){font-size: 45px;}
 }
@@ -69,7 +69,7 @@ p{
     height: 52px;
     align-items: center;
     border-radius: 26px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     @media (min-width: $medium-breakpoint-width){
         font-size: inherit;
@@ -122,18 +122,9 @@ p{
         font-weight: 300;
         font-size:15px;
     }
-    .info-card-heading{
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 900;
-            font-size: 21px;
-            margin-bottom: 10px;
-            margin-top: 23px;
-    }
-    .btn-generic{
-        width: 52px;
-        padding: 2px 2px 0 0;
-        
-        
+    h6{
+        margin-bottom: 10px;
+        margin-top: 23px;
     }
 }
 
@@ -189,7 +180,7 @@ header{
             grid-area: header-top;
             .header-top-contactinfo{
                 display:flex;
-                font-size: 13.5px;
+                font-size: 15px;
                 font-weight: 300;
                 a {
                     color: $black-font-color;
@@ -235,13 +226,14 @@ header{
                 width: 300px;
                 display: flex;
                 justify-content: space-between;
-                font-size:15px;                
+                font-size:16px;
+                font-weight: 400;                
                 .current-nav, a:hover {//underline nav words...
                     position: relative;
                     &::before {
                       content: ""; // dummy element 
                       position: absolute;
-                      bottom: 0; // dist below word
+                      bottom: -3px; // dist below word
                       left: 50%; // Center underline hz dir
                       transform: translateX(-50%); // Center line under word
                       width: 17px; 
@@ -519,7 +511,12 @@ main {
         .services-wrp{             
             padding: 0 12px;
             @media(min-width $medium-breakpoint-width){padding: 0;}
-            .section-title{}
+            .section-title{
+                h2{
+                    margin-bottom: 10px;
+                    @media(min-width: $large-breakpoint-width){margin-bottom: 40px;}
+                }
+            }
             .services-grid{
                 display: grid;
                 
@@ -556,12 +553,33 @@ main {
                         display: flex;
                         justify-content: flex-end;
                         margin-top:20px;
+                        .btn-generic{
+                            width: 52px;
+                            padding: 2px 2px 0 0;
+                        }
                         .btn-white{
                             border:none;
                         }
                     }
 
                 }
+            }
+        }
+    }
+    .whychooseus{
+        .whychooseus-wrp{
+            .whychooseus-content{
+                .section-title{}
+                .whychooseus-content-cards{
+                    .whychooseus-content-card{
+                        .whychooseus-content-card-icon{}
+                        .info-card{}
+                    }
+                }
+            }
+            .whychooseus-picture{
+                img{}
+                .grey-box{}
             }
         }
     }
