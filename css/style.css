@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-family: "DM Sans", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 35px;
 }
 @media (min-width: 1200px) {
@@ -43,7 +43,7 @@ h4 {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #F94D1C;
-  font-weight: 900;
+  font-weight: 500;
 }
 @media (min-width: 1200px) {
   h4 {
@@ -444,15 +444,18 @@ main .projects .projects-wrp .projects-button {
 main .brand-display {
   background-color: #FFFFFF;
   padding-top: 18px;
+  padding-bottom: 18px;
 }
 @media (min-width: 768px) {
   main .brand-display {
     padding-top: 36px;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 1200px) {
   main .brand-display {
-    padding-top: 72px;
+    padding-top: 96px;
+    padding-bottom: 105px;
   }
 }
 main .brand-display .container-md {
@@ -484,13 +487,12 @@ main .brand-display .container-md img {
 }
 main .features {
   background-color: #FFFFFF;
-  padding-top: 200px;
 }
 main .features .features-wrp {
   position: relative;
   z-index: 0;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -513,6 +515,18 @@ main .features .features-wrp .grey-rectangle {
   main .features .features-wrp .grey-rectangle {
     left: -100px;
     right: -100px;
+  }
+}
+@media (min-width: 768px) {
+  main .features .features-wrp {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  main .features .features-wrp {
+    padding-top: 80px;
+    padding-bottom: 100px;
   }
 }
 @media (min-width: 992px) {
