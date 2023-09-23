@@ -696,16 +696,16 @@ main .whychooseus {
 }
 main .whychooseus .whychooseus-wrp {
   display: grid;
-  grid-template-areas: "whychooseus-content" "whychooseus-picture";
+  grid-template-areas: "section-title" "whychooseus-picture" "whychooseus-content";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   justify-content: space-between;
 }
 @media (min-width: 992px) {
   main .whychooseus .whychooseus-wrp {
-    grid-template-areas: "whychooseus-content whychooseus-picture";
+    grid-template-areas: "section-title whychooseus-picture" "whychooseus-content whychooseus-picture";
     grid-template-columns: 50% 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
   }
 }
 @media (min-width: 1200px) {
@@ -718,13 +718,27 @@ main .whychooseus .whychooseus-wrp {
     grid-template-columns: 33% 1fr;
   }
 }
+main .whychooseus .whychooseus-wrp .section-title {
+  grid-area: section-title;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 main .whychooseus .whychooseus-wrp .whychooseus-content {
   grid-area: whychooseus-content;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card {
   padding-top: 40px;
   display: flex;
+}
+@media (min-width: 576px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card {
+    padding-left: 30px;
+  }
+}
+@media (min-width: 992px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card {
+    padding-left: inherit;
+  }
 }
 main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card .whychooseus-content-card-icon img {
   border: 1px solid #e7e7e7;
@@ -740,22 +754,28 @@ main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-car
 main .whychooseus .whychooseus-wrp .whychooseus-picture {
   grid-area: whychooseus-picture;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 main .whychooseus .whychooseus-wrp .whychooseus-picture img {
-  position: absolute;
-  right: 0;
-  bottom: 500px;
+  width: 85vw;
+  position: static;
   z-index: -1;
   height: 100%;
 }
 @media (min-width: 992px) {
   main .whychooseus .whychooseus-wrp .whychooseus-picture img {
-    bottom: -25px;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 50vw;
+    height: auto;
   }
 }
 @media (min-width: 1200px) {
   main .whychooseus .whychooseus-wrp .whychooseus-picture img {
-    bottom: 50px;
+    bottom: 25px;
+    width: auto;
   }
 }
 @media (min-width: 1400px) {
@@ -776,7 +796,7 @@ main .whychooseus .grey-box {
   right: 0;
   z-index: -2;
   top: 270px;
-  width: calc(50vw + 140px);
+  width: calc(50vw + 100px);
 }
 @media (min-width: 1200px) {
   main .whychooseus .grey-box {
