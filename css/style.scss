@@ -8,6 +8,7 @@ $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
 $black-bg: #0E1021;
 $black-font-color: #191919;
+$dark-grey-font-color: #5E5E5E;
 $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
 * {
@@ -58,6 +59,7 @@ p{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    color: $dark-grey-font-color;
 }
 .btn-generic{
     display:flex;
@@ -114,13 +116,10 @@ p{
     }
     
 }
-
 .info-card{
     padding-bottom: 0;
     p{
         margin-bottom: 0;
-        font-weight: 300;
-        font-size:15px;
     }
     h6{
         margin-bottom: 10px;
@@ -280,6 +279,7 @@ main {
                     font-family: 'Inter', sans-serif;
                     font-weight: 300;
                     font-size: 20px;
+                    color: #5A5957;
                     padding: 0 10px 0 10px;
                     text-align: center;
                     @media (min-width: $xlarge-breakpoint-width){
@@ -332,7 +332,7 @@ main {
             @media(min-width: $large-breakpoint-width){text-align: center;}
             h4{
                 padding-top: 32px;
-                @media(min-width: $xlarge-breakpoint-width){margin-top: 124px;}
+                @media(min-width: $xlarge-breakpoint-width){padding-top: 124px;}
             }
             h2{
                 margin-bottom: 32px;
@@ -375,6 +375,7 @@ main {
                         font-size: 14px;
                         font-weight: 500px;
                         i{margin-left:5px;}
+                        color: $black-font-color;
                     }
                 }
             }
@@ -510,7 +511,7 @@ main {
         background-color: $grey-bg;
         .services-wrp{             
             padding: 0 12px;
-            @media(min-width $medium-breakpoint-width){padding: 0;}
+            @media(min-width: $medium-breakpoint-width){padding: 0;}
             .section-title{
                 h2{
                     margin-bottom: 10px;
@@ -567,20 +568,81 @@ main {
         }
     }
     .whychooseus{
+        background-color: $white-bg;
+        padding-top: 64px;
+        position: relative;
+        z-index: 0;
         .whychooseus-wrp{
+            display: grid;
+            grid-template-areas:
+                'whychooseus-content'
+                'whychooseus-picture';
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            @media(min-width: $large-breakpoint-width){
+                grid-template-areas: 'whychooseus-content whychooseus-picture';
+                grid-template-columns: 50% 1fr;
+                grid-template-rows: auto;
+            }
+            @media(min-width: $xlarge-breakpoint-width){grid-template-columns: 40% 1fr;}
+            @media(min-width: $xxlarge-breakpoint-width){grid-template-columns: 33% 1fr;}
+            
+            justify-content: space-between;
             .whychooseus-content{
+                grid-area: whychooseus-content;
+                background-color: rgba(255, 255, 255, 0.8);
                 .section-title{}
                 .whychooseus-content-cards{
                     .whychooseus-content-card{
-                        .whychooseus-content-card-icon{}
-                        .info-card{}
+                        padding-top: 40px;
+                        display: flex;
+                        .whychooseus-content-card-icon{
+                            img{
+                                border: 1px solid #e7e7e7;
+                                border-radius: 50px;
+                                padding: 13px;
+                            }
+                        }
+                        .info-card{
+                            margin-left: 30px;
+                            h6{
+                                margin-top: 0;
+                            }
+                        }
                     }
                 }
             }
             .whychooseus-picture{
-                img{}
-                .grey-box{}
+                grid-area:whychooseus-picture;
+                position: relative;
+                
+                img{
+                    position: absolute;
+                    right: 0;
+                    bottom: 500px;
+                    @media(min-width: $large-breakpoint-width){bottom: -25px;}
+                    @media(min-width: $xlarge-breakpoint-width){bottom: 50px;}
+                    @media(min-width: $xxlarge-breakpoint-width){bottom: 98px;}
+                    z-index: -1;
+                    height: 100%;
+                    @media(min-width: $xlarge-breakpoint-width){height: auto;}
+                }
             }
+        }
+        .grey-box{
+            background-color: $grey-bg;
+            position: absolute;
+            display: none;
+            @media(min-width: $xlarge-breakpoint-width){display: block;}
+            
+            
+            bottom: 0;
+            right: 0;
+            z-index: -2;
+            top: 270px;
+            width: calc(50vw + 140px);//50vw;
+            @media(min-width: $xxlarge-breakpoint-width){width: calc(50vw + 115px);}
+           
         }
     }
 }

@@ -61,6 +61,7 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  color: #5E5E5E;
 }
 
 .btn-generic {
@@ -125,8 +126,6 @@ p {
 }
 .info-card p {
   margin-bottom: 0;
-  font-weight: 300;
-  font-size: 15px;
 }
 .info-card h6 {
   margin-bottom: 10px;
@@ -307,6 +306,7 @@ main .showcase .showcase-wrp .showcase-content .showcase-paragraph {
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 20px;
+  color: #5A5957;
   padding: 0 10px 0 10px;
   text-align: center;
 }
@@ -370,7 +370,7 @@ main .projects .projects-wrp h4 {
 }
 @media (min-width: 1200px) {
   main .projects .projects-wrp h4 {
-    margin-top: 124px;
+    padding-top: 124px;
   }
 }
 main .projects .projects-wrp h2 {
@@ -421,6 +421,7 @@ main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink {
   text-align: end;
   font-size: 14px;
   font-weight: 500px;
+  color: #191919;
 }
 main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink i {
   margin-left: 5px;
@@ -620,7 +621,7 @@ main .services {
 main .services .services-wrp {
   padding: 0 12px;
 }
-@media (min-width 768px) {
+@media (min-width: 768px) {
   main .services .services-wrp {
     padding: 0;
   }
@@ -687,6 +688,107 @@ main .services .services-wrp .services-grid .info-card .service-button .btn-gene
 main .services .services-wrp .services-grid .info-card .service-button .btn-white {
   border: none;
 }
+main .whychooseus {
+  background-color: #FFFFFF;
+  padding-top: 64px;
+  position: relative;
+  z-index: 0;
+}
+main .whychooseus .whychooseus-wrp {
+  display: grid;
+  grid-template-areas: "whychooseus-content" "whychooseus-picture";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+}
+@media (min-width: 992px) {
+  main .whychooseus .whychooseus-wrp {
+    grid-template-areas: "whychooseus-content whychooseus-picture";
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: auto;
+  }
+}
+@media (min-width: 1200px) {
+  main .whychooseus .whychooseus-wrp {
+    grid-template-columns: 40% 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  main .whychooseus .whychooseus-wrp {
+    grid-template-columns: 33% 1fr;
+  }
+}
+main .whychooseus .whychooseus-wrp .whychooseus-content {
+  grid-area: whychooseus-content;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card {
+  padding-top: 40px;
+  display: flex;
+}
+main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card .whychooseus-content-card-icon img {
+  border: 1px solid #e7e7e7;
+  border-radius: 50px;
+  padding: 13px;
+}
+main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card .info-card {
+  margin-left: 30px;
+}
+main .whychooseus .whychooseus-wrp .whychooseus-content .whychooseus-content-cards .whychooseus-content-card .info-card h6 {
+  margin-top: 0;
+}
+main .whychooseus .whychooseus-wrp .whychooseus-picture {
+  grid-area: whychooseus-picture;
+  position: relative;
+}
+main .whychooseus .whychooseus-wrp .whychooseus-picture img {
+  position: absolute;
+  right: 0;
+  bottom: 500px;
+  z-index: -1;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-picture img {
+    bottom: -25px;
+  }
+}
+@media (min-width: 1200px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-picture img {
+    bottom: 50px;
+  }
+}
+@media (min-width: 1400px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-picture img {
+    bottom: 98px;
+  }
+}
+@media (min-width: 1200px) {
+  main .whychooseus .whychooseus-wrp .whychooseus-picture img {
+    height: auto;
+  }
+}
+main .whychooseus .grey-box {
+  background-color: #F0EFE9;
+  position: absolute;
+  display: none;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  top: 270px;
+  width: calc(50vw + 140px);
+}
+@media (min-width: 1200px) {
+  main .whychooseus .grey-box {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  main .whychooseus .grey-box {
+    width: calc(50vw + 115px);
+  }
+}
+
 footer {
   background-color: #0E1021;
   color: #FFFFFF;
