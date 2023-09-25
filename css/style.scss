@@ -760,6 +760,8 @@ main {
                 h2{
                     margin: 0;
                 }
+                padding-left: 12px;
+                @media(min-width: $medium-breakpoint-width){padding-left: 0;}
             }
             .about-content{
                 grid-area: about-content;

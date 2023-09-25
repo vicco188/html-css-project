@@ -926,12 +926,18 @@ main .about .about-wrp .about-image img {
 }
 main .about .about-wrp .section-title {
   grid-area: section-title;
+  padding-left: 12px;
 }
 main .about .about-wrp .section-title h4 {
   margin-bottom: 20px;
 }
 main .about .about-wrp .section-title h2 {
   margin: 0;
+}
+@media (min-width: 768px) {
+  main .about .about-wrp .section-title {
+    padding-left: 0;
+  }
 }
 main .about .about-wrp .about-content {
   grid-area: about-content;
