@@ -621,11 +621,16 @@ main .services {
   z-index: 0;
 }
 main .services .services-wrp {
-  padding: 0 12px;
+  padding: 20px 12px;
 }
 @media (min-width: 768px) {
   main .services .services-wrp {
-    padding: 0;
+    padding: 50px 0;
+  }
+}
+@media (min-width: 1200px) {
+  main .services .services-wrp {
+    padding: 120px 0;
   }
 }
 main .services .services-wrp .section-title h2 {
@@ -693,11 +698,11 @@ main .services .services-wrp .services-grid .info-card .service-button .btn-whit
 main .services .services-wrp .services-button {
   display: flex;
   justify-content: center;
-  padding: 10px 0 40px 0;
+  padding-top: 10px;
 }
 @media (min-width: 1200px) {
   main .services .services-wrp .services-button {
-    padding: 50px 0 120px 0;
+    padding-top: 50px;
   }
 }
 main .services .services-white-squiggle {
@@ -831,6 +836,146 @@ main .whychooseus .grey-box {
   main .whychooseus .grey-box {
     width: calc(50vw + 115px);
   }
+}
+main .about {
+  background-color: #FFFFFF;
+  padding: 30px 0;
+}
+@media (min-width: 1200px) {
+  main .about {
+    padding: 120px 0;
+  }
+}
+main .about .about-wrp {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section-title" "about-image" "about-content";
+  column-gap: 60px;
+}
+@media (min-width: 992px) {
+  main .about .about-wrp {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about-image section-title" "about-image about-content";
+  }
+}
+@media (min-width: 1400px) {
+  main .about .about-wrp {
+    column-gap: 200px;
+  }
+}
+main .about .about-wrp .about-image {
+  grid-area: about-image;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  main .about .about-wrp .about-image {
+    justify-content: flex-start;
+  }
+}
+main .about .about-wrp .about-image .quote-box {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  background-color: #BEEBFF;
+  padding: 15px 15px 15px 15px;
+  width: 63%;
+}
+@media (min-width: 1200px) {
+  main .about .about-wrp .about-image .quote-box {
+    padding: 36px 25px 30px 36px;
+  }
+}
+main .about .about-wrp .about-image .quote-box .qb-h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #191919;
+}
+main .about .about-wrp .about-image .quote-box .qb-h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #F94D1C;
+}
+main .about .about-wrp .about-image .quote-box p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 19px;
+}
+main .about .about-wrp .about-image img {
+  width: auto;
+  justify-self: center;
+}
+@media (min-width: 992px) {
+  main .about .about-wrp .about-image img {
+    width: 40vw;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  main .about .about-wrp .about-image img {
+    width: auto;
+    margin-left: 56px;
+  }
+}
+main .about .about-wrp .section-title {
+  grid-area: section-title;
+}
+main .about .about-wrp .section-title h4 {
+  margin-bottom: 20px;
+}
+main .about .about-wrp .section-title h2 {
+  margin: 0;
+}
+main .about .about-wrp .about-content {
+  grid-area: about-content;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  main .about .about-wrp .about-content {
+    padding-left: 0;
+  }
+}
+main .about .about-wrp .about-content p {
+  color: #5E5E5E;
+  line-height: 32px;
+}
+main .about .about-wrp .about-content .about-content-buttons {
+  display: flex;
+  margin-top: 25px;
+}
+@media (min-width: 992px) {
+  main .about .about-wrp .about-content .about-content-buttons {
+    margin-top: 70px;
+  }
+}
+main .about .about-wrp .about-content .about-content-buttons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+main .about .about-wrp .about-content .about-content-buttons a span {
+  color: #191919;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+main .about .about-wrp .about-content .about-content-buttons .fa-play {
+  width: 52px;
+  padding: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 38px;
+  margin-right: 16px;
 }
 
 footer {

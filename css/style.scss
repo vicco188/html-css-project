@@ -512,8 +512,9 @@ main {
         position: relative;
         z-index: 0;   
         .services-wrp{
-            padding: 0 12px;
-            @media(min-width: $medium-breakpoint-width){padding: 0;}
+            padding: 20px 12px;
+            @media(min-width: $medium-breakpoint-width){padding: 50px 0;}
+            @media(min-width: $xlarge-breakpoint-width){padding: 120px 0;}
             .section-title{
                 h2{
                     margin-bottom: 10px;
@@ -570,8 +571,8 @@ main {
             .services-button{
                 display:flex;
                 justify-content: center;
-                padding: 10px 0 40px 0;
-                @media(min-width: $xlarge-breakpoint-width){padding: 50px 0 120px 0;}
+                padding-top: 10px;
+                @media(min-width: $xlarge-breakpoint-width){padding-top: 50px;}
             }
             
             
@@ -679,6 +680,129 @@ main {
             @media(min-width: $xxlarge-breakpoint-width){width: calc(50vw + 115px);}
            
         }
+    }
+    .about{
+        background-color: $white-bg;
+        padding: 30px 0;
+        @media(min-width: $xlarge-breakpoint-width){padding: 120px 0;}
+        .about-wrp{
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                'section-title'
+                'about-image'
+                'about-content';
+            @media(min-width: $large-breakpoint-width){
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    'about-image section-title'
+                    'about-image about-content';
+            }
+            column-gap: 60px;
+            @media(min-width: $xxlarge-breakpoint-width){column-gap: 200px;}
+            .about-image{
+                grid-area: about-image;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                @media(min-width: $large-breakpoint-width){justify-content: flex-start;}
+                .quote-box{
+                    position: absolute;
+                    left: 0;
+                    bottom: 40px;
+                    background-color: #BEEBFF;
+                    padding: 15px 15px 15px 15px;
+                    @media(min-width: $xlarge-breakpoint-width){
+                        padding: 36px 25px 30px 36px;
+                    }
+                    width: 63%;
+                    .qb-h1{
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: $black-font-color
+                    }
+                    .qb-h2{
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: #F94D1C
+                    }
+                    p{
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-style: italic;
+                        margin-top: 19px;
+                    }
+                }
+                img{
+                        width: auto;
+                        justify-self: center;
+                        @media(min-width: $large-breakpoint-width){
+                            width: 40vw;
+                            margin-left: 20px;  
+                        }
+                            
+                        @media(min-width: $xlarge-breakpoint-width){
+                            width: auto;
+                            margin-left: 56px;
+                        }
+                    }
+            }
+            .section-title{
+                grid-area: section-title;
+                h4{
+                    margin-bottom: 20px;
+                }
+                h2{
+                    margin: 0;
+                }
+            }
+            .about-content{
+                grid-area: about-content;
+                padding-right: 20px;
+                padding-left: 20px;
+                @media(min-width: $medium-breakpoint-width){padding-left: 0;}
+                
+                p{
+                    color: $dark-grey-font-color;
+                    line-height: 32px;
+                }
+                .about-content-buttons{
+                    display: flex;
+                    margin-top: 25px;
+                    @media(min-width: $large-breakpoint-width){margin-top: 70px;}
+                    a  {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        span {
+                            color: $black-font-color;
+                            font-size: 16px;
+                            font-family: 'Inter', sans-serif;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    .fa-play{
+                        width: 52px;
+                        padding: 0;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 38px;
+                        margin-right: 16px;
+                        
+                        
+                    }
+                }
+            }
+        }
+
     }
 }
 footer{
