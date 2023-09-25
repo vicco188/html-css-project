@@ -668,8 +668,20 @@ main .services .services-wrp .services-grid .info-card {
   background-color: #FFFFFF;
   padding: 30px 30px;
 }
-main .services .services-wrp .services-grid .info-card.info-card-highlighted {
+main .services .services-wrp .services-grid .info-card:hover {
   background-color: #F9D783;
+}
+main .services .services-wrp .services-grid .info-card:hover .btn-black {
+  background-color: #FFFFFF;
+  color: #191919;
+  border: none;
+}
+main .services .services-wrp .services-grid .info-card a {
+  color: inherit;
+  text-decoration: none;
+}
+main .services .services-wrp .services-grid .info-card a.btn-black {
+  color: #FFFFFF;
 }
 @media (min-width: 1200px) {
   main .services .services-wrp .services-grid .info-card {
