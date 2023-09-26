@@ -7,8 +7,10 @@ $hover-color: #aaaaaa;
 $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
 $black-bg: #0E1021;
+$yellow-bg: #EDCF86;
 $black-font-color: #191919;
 $dark-grey-font-color: #5E5E5E;
+$grey-font-color: #B6B6BC;
 $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
 * {
@@ -45,7 +47,7 @@ h2{
 }
 h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     @media(min-width: $xlarge-breakpoint-width){font-size: 18px;}
     color: #F94D1C;
     font-weight: 500;
@@ -125,6 +127,10 @@ p{
         margin-bottom: 10px;
         margin-top: 23px;
     }
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 header{
@@ -822,8 +828,175 @@ main {
         }
 
     }
+    .testimonials{
+        // *{border: 1px solid lightblue;}
+        background-color: $yellow-bg;
+        padding-top: 50px; 
+        padding-bottom: 50px;
+        @media(min-width: $xlarge-breakpoint-width){
+            padding-top: 72px; padding-bottom: 120px;
+        }
+        .testimonials-wrp{
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            @media(min-width: $xlarge-breakpoint-width){
+                padding-top: 120px;
+            padding-bottom: 120px;
+            }
+            position: relative;
+            z-index: 0;
+            
+            .section-title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 86px;
+            }
+            .testimonials-grid{
+                display: grid;
+                column-gap: 51px;
+                row-gap: 70px;
+                grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+                .testimonial-card{
+                    padding: 0 30px;
+                    .rating{
+                        color: #F94D1C;
+                        letter-spacing: 5px;
+                        font-size: 0.9rem;
+                    }
+                    p{
+                        color: $black-font-color;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-style: italic;
+                        margin: 26px 0 34px;
+                        line-height: 34px;
+                    }
+                    .testifier-byline{
+                        display: grid;
+                        grid-template-columns: 70px 1fr;
+                        column-gap: 16px;
+                        grid-template-areas:
+                            'tpicture   tname'
+                            'tpicture   ttitle';
+                        .testifier-picture{
+                            grid-area: tpicture;
+
+                        }
+                        .testifier-name{
+                            grid-area: tname;
+                            font-family: 'DM Sans', sans-serif;
+                            font-size: 22px;
+                            font-weight: 700;
+                            color: $black-font-color;
+                            display: flex;
+                            align-items: end;
+                        }
+                        .testifier-title{
+                            grid-area: ttitle;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #F94D1C;
+                        }
+                    }
+                }
+            }
+            .testimonials-button{
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                @media(min-width: $xlarge-breakpoint-width){margin-top: 98px;}
+            }
+            .white-box{
+                background-color: $white-bg;
+                top: 0;
+                bottom: 0;
+                left: 15px;
+                right: 15px;
+                @media(min-width: 1550px){
+                    left: -100px;
+                    right: -100px;
+                    width: auto;   
+                }
+                position: absolute;
+                z-index: -1;
+            }
+        }
+        
+        
+    }
 }
 footer{
     background-color: $black-bg;
-    color: $white-font-color;
+    // color: $white-font-color;
+    // *{border: white 1px solid;}//debug only
+
+    .footer-wrp{
+        @media(min-width: $medium-breakpoint-width){padding: 0;}
+        .footer-top{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px 0;
+            @media(min-width: $xlarge-breakpoint-width){padding: 114px 0 80px 0;}
+            .company-presentation{
+                width: 95vw;
+                @media(min-width: $xlarge-breakpoint-width){
+                    width: 309px;
+                }
+            }
+                img{
+                    margin-bottom: 30px;
+                }
+                p{
+                    color: $grey-font-color;
+                    line-height: 26px;
+                }
+            .link-grid-card{
+                width: 250px;
+                @media(min-width: $small-breakpoint-width){width: 180px;}
+                h6{
+                    color: $white-font-color;
+                    margin-bottom: 12px;
+                    @media(min-width: $medium-breakpoint-width){margin-bottom: 35px;}
+                    margin-top: 18px;
+                }
+                a{
+                    display: block;
+                    color: $grey-font-color;
+                    text-decoration: none;
+                    line-height: 40px;
+                }
+            }
+
+            
+            
+
+        }
+        .footer-bottom{
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding:16px 0;
+            line-height: 48px;
+            .copyright{
+                color: $grey-font-color; 
+            }
+            .somed{
+                order: -1;
+                @media(min-width: $medium-breakpoint-width){order: 0;}
+                a{
+                    color: $white-font-color;
+                    margin-left: 25px;
+                    &.firstsomed{
+                        margin-left: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+
 }
