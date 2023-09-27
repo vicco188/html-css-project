@@ -931,16 +931,22 @@ main {
 footer{
     background-color: $black-bg;
     // color: $white-font-color;
-    // *{border: white 1px solid;}//debug only
-
-    .footer-wrp{
-        @media(min-width: $medium-breakpoint-width){padding: 0;}
+    //  *{border: white 1px solid;}//debug only
+    .footer-top-wrp{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @media(min-width: $xlarge-breakpoint-width){
+            padding-top: 114px;
+            padding-bottom: 80px;
+        }
+        border-bottom: 1px solid #3E404D;
         .footer-top{
+            @media(min-width: $medium-breakpoint-width){padding: 0;}
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            padding: 50px 0;
-            @media(min-width: $xlarge-breakpoint-width){padding: 114px 0 80px 0;}
+            
             .company-presentation{
                 width: 95vw;
                 @media(min-width: $xlarge-breakpoint-width){
@@ -970,33 +976,37 @@ footer{
                     line-height: 40px;
                 }
             }
-
-            
-            
-
         }
-        .footer-bottom{
-            display: flex; 
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding:16px 0;
-            line-height: 48px;
-            .copyright{
-                color: $grey-font-color; 
-            }
-            .somed{
-                order: -1;
-                @media(min-width: $medium-breakpoint-width){order: 0;}
-                a{
-                    color: $white-font-color;
-                    margin-left: 25px;
-                    &.firstsomed{
-                        margin-left: 0;
-                    }
-                }
-                
+        .footer-squiggle{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img{
+                opacity: 0.6;
             }
         }
     }
-
+    .footer-bottom{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:16px 0;
+        line-height: 48px;
+        .copyright{
+            color: $grey-font-color; 
+        }
+        .somed{
+            order: -1;
+            @media(min-width: $medium-breakpoint-width){order: 0;}
+            a{
+                color: $white-font-color;
+                margin-left: 25px;
+                &.firstsomed{
+                    margin-left: 0;
+                }
+            }
+            
+        }
+    }
+    
 }
