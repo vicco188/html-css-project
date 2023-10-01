@@ -17,6 +17,7 @@ h1 {
   padding: 0 10px 0 10px;
   text-align: center;
   font-size: 50px;
+  letter-spacing: 1.9px;
 }
 @media (min-width: 768px) {
   h1 {
@@ -279,7 +280,6 @@ header .header-wrp .header-bottom nav a:hover::before {
 }
 
 main .intro-section {
-  border: 1px solid blue;
   position: relative;
   background-color: #F0EFE9;
   z-index: 0;
@@ -304,6 +304,7 @@ main .intro-section .intro-section-wrp .showcase-content {
   main .intro-section .intro-section-wrp .showcase-content h1 {
     font-size: 96px;
     text-align: inherit;
+    letter-spacing: 1px;
   }
 }
 main .intro-section .intro-section-wrp .showcase-content .showcase-paragraph {
@@ -355,7 +356,6 @@ main .intro-section .intro-section-wrp .showcase-picture .showcase-picture-squig
   }
 }
 main .intro-section .intro-section-wrp .page-heading {
-  border: 1px solid brown;
   justify-self: center;
   align-self: center;
   display: flex;
@@ -363,13 +363,25 @@ main .intro-section .intro-section-wrp .page-heading {
   align-items: center;
   margin: 116px 0 93px 0;
 }
+main .intro-section .intro-section-wrp .page-heading nav {
+  display: flex;
+  gap: 16px;
+}
 main .intro-section .intro-section-wrp .page-heading nav a {
   font-weight: 300;
+  text-decoration: none;
+  color: #191919;
+}
+main .intro-section .intro-section-wrp .page-heading nav a:hover {
+  color: #aaaaaa;
 }
 main .intro-section .intro-section-wrp .page-heading nav span {
   font-weight: 500;
 }
-main .intro-section .showcase-white-squiggle {
+main .intro-section .intro-section-wrp .page-heading h2 {
+  margin-top: 25px;
+}
+main .intro-section .intro-white-squiggle {
   position: absolute;
   bottom: 0;
   display: block;
@@ -1363,6 +1375,16 @@ main .newsletter .squiggle {
   main .newsletter .squiggle {
     display: block;
   }
+}
+main .contact-info {
+  background-color: #FFFFFF;
+}
+main .contact-form {
+  background-color: #FFFFFF;
+  padding: 80px 0 120px 0;
+}
+main .contact-form .contact-form-wrp {
+  background-color: #F0EFE9;
 }
 
 footer {

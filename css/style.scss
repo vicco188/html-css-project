@@ -34,6 +34,7 @@ h1{
     @media (min-width: $medium-breakpoint){
         font-size: 56px;
     }
+    letter-spacing: 1.9px;
 }
 h2{
     font-family: 'DM Sans', sans-serif;
@@ -254,7 +255,6 @@ header{
 }
 main {
     .intro-section{
-        border: 1px solid blue;
         position: relative;
         background-color:$grey-bg;
         z-index: 0;
@@ -272,6 +272,7 @@ main {
                     @media (min-width: $xlarge-breakpoint){
                         font-size: 96px;
                         text-align: inherit;
+                        letter-spacing: 1px;
                     }
                 }
                 .showcase-paragraph{
@@ -314,26 +315,34 @@ main {
                 }
             }
             .page-heading{
-                border: 1px solid brown;
                 justify-self: center;
                 align-self: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin: 116px 0 93px 0;
-                // height: 300px;
                 nav{
+                    display: flex;
+                    gap: 16px;
                     a{
                         font-weight: 300;
+                        text-decoration: none;
+                        color: $black-font-color;
+                        &:hover{
+                            color: $hover-color;
+                        }
                     }
                     span{
                         font-weight: 500;
                     }
                 }
+                h2{
+                    margin-top: 25px;
+                }
 
             }
         }
-        .showcase-white-squiggle{
+        .intro-white-squiggle{
             position: absolute;
             bottom: 0;
             display: block;
@@ -1095,6 +1104,17 @@ main {
             z-index: -1;
             display:none;
             @media(min-width: $medium-breakpoint){display: block;}
+        }
+    }
+    .contact-info{
+        background-color: $white-bg;
+    }
+    
+    .contact-form{
+        background-color: $white-bg;
+        padding: 80px 0 120px 0;
+        .contact-form-wrp{
+            background-color: $grey-bg
         }
     }
 }
