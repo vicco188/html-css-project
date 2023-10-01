@@ -1,8 +1,8 @@
-$small-breakpoint-width: 576px;
-$medium-breakpoint-width: 768px;
-$large-breakpoint-width: 992px;
-$xlarge-breakpoint-width: 1200px;
-$xxlarge-breakpoint-width: 1400px;
+$small-breakpoint: 576px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 992px;
+$xlarge-breakpoint: 1200px;
+$xxlarge-breakpoint: 1400px;
 $hover-color: #aaaaaa;
 $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
@@ -30,10 +30,10 @@ h1{
     font-weight: 700;
     font-size: 50px;
     padding: 0 10px 0 10px;
-    @media (min-width: $medium-breakpoint-width){
+    @media (min-width: $medium-breakpoint){
         font-size: 60px;
     }
-    @media (min-width: $xlarge-breakpoint-width){
+    @media (min-width: $xlarge-breakpoint){
         font-size: 96px;
     }
 }
@@ -41,12 +41,13 @@ h2{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 35px;
-    @media(min-width: $xlarge-breakpoint-width){font-size: 45px;}
+    @media(min-width: $xlarge-breakpoint){font-size: 45px;}
+    letter-spacing: 1.9px;
 }
 h4 {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
-    @media(min-width: $xlarge-breakpoint-width){font-size: 18px;}
+    @media(min-width: $xlarge-breakpoint){font-size: 18px;}
     color: #F94D1C;
     font-weight: 500;
 }
@@ -65,18 +66,18 @@ p{
     display:flex;
     color: $black-font-color;
     text-decoration:none;
-    padding-left: 28px;
-    padding-right: 22px;
-    height: 52px;
+    padding-left: 35px;
+    padding-right: 36px;
+    height: 56px;
     align-items: center;
-    border-radius: 26px;
+    border-radius: 28px;
     font-weight: 600;
     font-size: 14px;
-    @media (min-width: $medium-breakpoint-width){
+    @media (min-width: $medium-breakpoint){
         font-size: inherit;
     }
     i {
-        margin-left:18px;
+        margin-left:8px;
         font-size: 0.9em;
     }
     &.btn-yellow {
@@ -110,7 +111,7 @@ p{
     
     h4{
         margin-bottom:15px;
-        @media(min-width: $large-breakpoint-width){margin-bottom:25px;}
+        @media(min-width: $large-breakpoint){margin-bottom:25px;}
     }
 }
 .info-card{
@@ -132,14 +133,14 @@ header{
     padding-bottom: 10px;
     .header-wrp{
         height: 100px;
-        @media(min-width: $medium-breakpoint-width){height: 121px;}
+        @media(min-width: $medium-breakpoint){height: 121px;}
         display: grid;
         grid-template-columns: 70px auto;
         padding-left: 0;
         padding-right: 70px; //must be same as first column width in grid-template-columns in order to counter the burger button making logo uncentered.
         grid-template-areas:
             'header-burgerbutton header-logo';
-        @media(min-width: $medium-breakpoint-width){
+        @media(min-width: $medium-breakpoint){
             grid-template-columns: 208px auto;
             grid-template-rows:50px auto;
             grid-template-areas:
@@ -155,7 +156,7 @@ header{
             align-items: center;
             justify-content: center;
             margin-top: 5px;
-            @media(min-width: $medium-breakpoint-width){display: none;}
+            @media(min-width: $medium-breakpoint){display: none;}
         }
         .header-logo{
             display: flex;
@@ -163,15 +164,15 @@ header{
             //background-color:#6dc9cf; //debug only
             align-items: center;
             justify-content: center;
-            @media(min-width: $medium-breakpoint-width){justify-content: left;}
+            @media(min-width: $medium-breakpoint){justify-content: left;}
         }
         .header-top{
             //background-color: pink; //debug only
             display: none;            
-            @media(min-width: $medium-breakpoint-width){display: flex;}
+            @media(min-width: $medium-breakpoint){display: flex;}
             justify-content: space-between;
             //justify-content: flex-end;
-            //@media(min-width: $xlarge-breakpoint-width){justify-content: space-between;}
+            //@media(min-width: $xlarge-breakpoint){justify-content: space-between;}
             align-items: center;
             border-bottom: $grey-border;
             grid-area: header-top;
@@ -195,7 +196,7 @@ header{
                     }
                     &#lastcontact{
                         display: none;
-                        @media(min-width: $xlarge-breakpoint-width){display: block;}                        
+                        @media(min-width: $xlarge-breakpoint){display: block;}                        
                     }
                     i {padding-right: 8px;}                    
                 }
@@ -213,11 +214,11 @@ header{
         .header-bottom {
             //background-color: aquamarine; //debug only
             display: none;
-            @media(min-width: $medium-breakpoint-width){display: flex;}
+            @media(min-width: $medium-breakpoint){display: flex;}
             justify-content: space-between;
             align-items: flex-end;
             // align-items:center;
-            // @media(min-width: $xlarge-breakpoint-width){align-items: end;}
+            // @media(min-width: $xlarge-breakpoint){align-items: end;}
             grid-area: header-bottom;
             nav{
                 width: 300px;
@@ -259,7 +260,7 @@ main {
         .showcase-wrp{
             display: flex;
             padding:20px 0 20px 0;
-            @media(min-width: $xlarge-breakpoint-width){padding: 0;}
+            @media(min-width: $xlarge-breakpoint){padding: 0;}
             .showcase-content{
                 gap: 10px;
                 display: flex;
@@ -267,7 +268,7 @@ main {
                 justify-content: center;
                 h1{
                     text-align: center;
-                    @media (min-width: $xlarge-breakpoint-width){text-align:inherit;}
+                    @media (min-width: $xlarge-breakpoint){text-align:inherit;}
                 }
                 .showcase-paragraph{
                     font-family: 'Inter', sans-serif;
@@ -276,7 +277,7 @@ main {
                     color: #5A5957;
                     padding: 0 10px 0 10px;
                     text-align: center;
-                    @media (min-width: $xlarge-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint){
                         text-align:inherit;
                         padding: 0px;
                     }
@@ -285,7 +286,7 @@ main {
                     display: flex;
                     gap: 20px;
                     justify-content: center;
-                    @media (min-width: $xlarge-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint){
                         justify-content: flex-start;
                     }
                 } 
@@ -294,7 +295,7 @@ main {
                 position: relative;
                 .showcase-picture-main{
                     display: none;
-                    @media (min-width: $xlarge-breakpoint-width){
+                    @media (min-width: $xlarge-breakpoint){
                         display: block;
                         padding-right:100px;
                         padding-top: 50px;
@@ -305,7 +306,7 @@ main {
                     right: -65px;
                     top: 375px;
                     display: none;
-                    @media(min-width: $xlarge-breakpoint-width){display:block;}
+                    @media(min-width: $xlarge-breakpoint){display:block;}
                 }
             }
         }
@@ -320,19 +321,19 @@ main {
     .projects{
         background-color: $white-bg;
         .projects-wrp{
-            @media(min-width: $large-breakpoint-width){text-align: center;}
+            @media(min-width: $large-breakpoint){text-align: center;}
             h4{
                 padding-top: 32px;
-                @media(min-width: $xlarge-breakpoint-width){padding-top: 124px;}
+                @media(min-width: $xlarge-breakpoint){padding-top: 124px;}
             }
             h2{
                 margin-bottom: 32px;
-                @media(min-width: $xlarge-breakpoint-width){margin-bottom:86px;}
+                @media(min-width: $xlarge-breakpoint){margin-bottom:86px;}
             }
             .projects-grid{
                 display: grid;
                 grid-template-columns: 1fr;
-                @media(min-width: $large-breakpoint-width){grid-template-columns: 1fr 1fr;}
+                @media(min-width: $large-breakpoint){grid-template-columns: 1fr 1fr;}
                 gap: 30px;
                 .projects-grid-card{
                     color: $black-font-color;
@@ -350,7 +351,7 @@ main {
                         padding-bottom: 12px;
                         padding-top: 12px;
                         margin-bottom: 12px;
-                        @media(min-width: $xlarge-breakpoint-width){
+                        @media(min-width: $xlarge-breakpoint){
                             padding-top: 38px;
                             margin-bottom: 38px;
                         }
@@ -373,29 +374,29 @@ main {
                 display:flex;
                 justify-content: center;
                 padding: 10px 0 40px 0;
-                @media(min-width: $xlarge-breakpoint-width){padding: 70px 0 90px 0;}
+                @media(min-width: $xlarge-breakpoint){padding: 70px 0 90px 0;}
             }
         }
     }
     .brand-display{
         background-color: $white-bg;
         padding-top: 18px; padding-bottom: 18px;
-        @media(min-width: $medium-breakpoint-width){padding-top: 36px; padding-bottom:36px}
-        @media(min-width:$xlarge-breakpoint-width){padding-top: 96px; padding-bottom:105px;}
+        @media(min-width: $medium-breakpoint){padding-top: 36px; padding-bottom:36px}
+        @media(min-width:$xlarge-breakpoint){padding-top: 96px; padding-bottom:105px;}
         .container-md{
             display: flex;
             justify-content: space-between;
             padding-left: 20px;
             padding-right:20px;
-            @media(min-width: $xlarge-breakpoint-width){
+            @media(min-width: $xlarge-breakpoint){
                 padding-left: 40px;
                 padding-right:40px;
             }
             img {
                 width: 17%;
                 height: auto;
-                @media(min-width: $small-breakpoint-width){width:15%;}
-                @media(min-width: $xlarge-breakpoint-width){
+                @media(min-width: $small-breakpoint){width:15%;}
+                @media(min-width: $xlarge-breakpoint){
                     height: 100%;
                     width: auto;        
                 }
@@ -419,15 +420,15 @@ main {
                     z-index: -1;
                 }
                 padding-top: 30px; padding-bottom: 30px;
-                @media(min-width: $medium-breakpoint-width){
+                @media(min-width: $medium-breakpoint){
                     padding-top: 60px; padding-bottom: 60px;
                 }
-                @media(min-width: $xlarge-breakpoint-width){
+                @media(min-width: $xlarge-breakpoint){
                     padding-top: 80px; padding-bottom: 100px;
                 }
             display: grid;
             grid-template-columns: 1fr;
-            @media(min-width: $large-breakpoint-width){grid-template-columns: 19fr 31fr;}
+            @media(min-width: $large-breakpoint){grid-template-columns: 19fr 31fr;}
             .features-left{
                 h2{
                     margin-bottom: 40px;
@@ -435,12 +436,12 @@ main {
                 .features-button{
                     display: flex;
                     padding-left: 20px;
-                    @media(min-width: $large-breakpoint-width){padding-left: 0;}
+                    @media(min-width: $large-breakpoint){padding-left: 0;}
                     .btn-generic{
                         display: flex;
                         justify-content: center;
                         width: 250px;
-                        @media(min-width: $large-breakpoint-width){width: 94%;}
+                        @media(min-width: $large-breakpoint){width: 94%;}
                         a{
                             color: $black-font-color;
                             text-decoration: none;
@@ -456,16 +457,16 @@ main {
                     display: grid;
                     row-gap: 66px;
                     grid-template-columns: 1fr;
-                    @media(min-width: $small-breakpoint-width){grid-template-columns: 1fr 1fr;}
+                    @media(min-width: $small-breakpoint){grid-template-columns: 1fr 1fr;}
                     column-gap: 72px;
-                    @media(min-width: $medium-breakpoint-width){column-gap: 144px;}
-                    @media(min-width: $large-breakpoint-width){column-gap: 36px;}
-                    @media(min-width: $xlarge-breakpoint-width){column-gap: 72px;}
-                    @media(min-width: $xxlarge-breakpoint-width){column-gap: 144px;}
+                    @media(min-width: $medium-breakpoint){column-gap: 144px;}
+                    @media(min-width: $large-breakpoint){column-gap: 36px;}
+                    @media(min-width: $xlarge-breakpoint){column-gap: 72px;}
+                    @media(min-width: $xxlarge-breakpoint){column-gap: 144px;}
                     .info-card{
                         width: 80vw;
                         position:relative;
-                        @media(min-width: $small-breakpoint-width){width: 227px;}
+                        @media(min-width: $small-breakpoint){width: 227px;}
                         
                         .icon-sparkles-a{
                             position: absolute;
@@ -493,12 +494,12 @@ main {
         z-index: 0;   
         .services-wrp{
             padding: 20px 12px;
-            @media(min-width: $medium-breakpoint-width){padding: 50px 0;}
-            @media(min-width: $xlarge-breakpoint-width){padding: 120px 0;}
+            @media(min-width: $medium-breakpoint){padding: 50px 0;}
+            @media(min-width: $xlarge-breakpoint){padding: 120px 0;}
             .section-title{
                 h2{
                     margin-bottom: 10px;
-                    @media(min-width: $large-breakpoint-width){margin-bottom: 40px;}
+                    @media(min-width: $large-breakpoint){margin-bottom: 40px;}
                 }
             }
             .services-grid{
@@ -506,15 +507,15 @@ main {
                 gap: 15px;
                 padding:20px;
                 grid-template-columns: minmax(200px, 1fr);
-                @media(min-width: $small-breakpoint-width){
+                @media(min-width: $small-breakpoint){
                     grid-template-columns: repeat(2, minmax(200px, 1fr));
                     gap:20px;
                 }
-                @media(min-width: $large-breakpoint-width){
+                @media(min-width: $large-breakpoint){
                     grid-template-columns: repeat(4, minmax(200px, 1fr));
                     padding:0;
                 }
-                @media(min-width: $xlarge-breakpoint-width){
+                @media(min-width: $xlarge-breakpoint){
                     gap:30px;
                 }
                 .info-card{
@@ -533,7 +534,7 @@ main {
                         &.btn-black{color: $white-font-color;}
                     }
                     padding: 30px 30px;
-                    @media(min-width: $xlarge-breakpoint-width){padding: 48px 30px;}
+                    @media(min-width: $xlarge-breakpoint){padding: 48px 30px;}
                     .info-card-line{
                         width:39px;
                         border: 1px solid $black-font-color;
@@ -549,8 +550,9 @@ main {
                         justify-content: flex-end;
                         margin-top:20px;
                         .btn-generic{
-                            width: 52px;
-                            padding: 2px 2px 0 0;
+                            width: 56px;
+                            justify-content: center;
+                            padding: 2px 8px 0 0;
                         }
                         .btn-white{
                             border:none;
@@ -562,7 +564,7 @@ main {
                 display:flex;
                 justify-content: center;
                 padding-top: 10px;
-                @media(min-width: $xlarge-breakpoint-width){padding-top: 50px;}
+                @media(min-width: $xlarge-breakpoint){padding-top: 50px;}
             }
         }
         .services-white-squiggle{
@@ -587,15 +589,15 @@ main {
                 'whychooseus-content';
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto;
-            @media(min-width: $large-breakpoint-width){
+            @media(min-width: $large-breakpoint){
                 grid-template-areas: 
                     'section-title whychooseus-picture'
                     'whychooseus-content whychooseus-picture';
                 grid-template-columns: 50% 1fr;
                 grid-template-rows: 1fr;
             }
-            @media(min-width: $xlarge-breakpoint-width){grid-template-columns: 40% 1fr;}
-            @media(min-width: $xxlarge-breakpoint-width){grid-template-columns: 33% 1fr;}
+            @media(min-width: $xlarge-breakpoint){grid-template-columns: 40% 1fr;}
+            @media(min-width: $xxlarge-breakpoint){grid-template-columns: 33% 1fr;}
             justify-content: space-between;
             .section-title{
                 grid-area: section-title;
@@ -608,8 +610,8 @@ main {
                     .whychooseus-content-card{
                         padding-top: 40px;
                         display: flex;
-                        @media(min-width: $small-breakpoint-width){padding-left: 30px;}
-                        @media(min-width: $large-breakpoint-width){padding-left: inherit;}
+                        @media(min-width: $small-breakpoint){padding-left: 30px;}
+                        @media(min-width: $large-breakpoint){padding-left: inherit;}
                         .whychooseus-content-card-icon{
                             img{
                                 border: 1px solid #e7e7e7;
@@ -634,18 +636,18 @@ main {
                 img{
                     width: 85vw;
                     position: static;
-                    @media(min-width: $large-breakpoint-width){
+                    @media(min-width: $large-breakpoint){
                         position: absolute;
                         right: 0; 
                         bottom: 15px;
                         width: 50vw;
                         height: auto;
                     }
-                    @media(min-width: $xlarge-breakpoint-width){bottom: 25px; width: auto;}
-                    @media(min-width: $xxlarge-breakpoint-width){bottom: 98px;}
+                    @media(min-width: $xlarge-breakpoint){bottom: 25px; width: auto;}
+                    @media(min-width: $xxlarge-breakpoint){bottom: 98px;}
                     z-index: -1;
                     height: 100%;
-                    @media(min-width: $xlarge-breakpoint-width){height: auto;}
+                    @media(min-width: $xlarge-breakpoint){height: auto;}
                 }
             }
         }
@@ -653,19 +655,19 @@ main {
             background-color: $grey-bg;
             position: absolute;
             display: none;
-            @media(min-width: $xlarge-breakpoint-width){display: block;}
+            @media(min-width: $xlarge-breakpoint){display: block;}
             bottom: 0;
             right: 0;
             z-index: -2;
             top: 270px;
             width: calc(50vw + 100px);
-            @media(min-width: $xxlarge-breakpoint-width){width: calc(50vw + 115px);}
+            @media(min-width: $xxlarge-breakpoint){width: calc(50vw + 115px);}
         }
     }
     .about{
         background-color: $white-bg;
         padding: 30px 0;
-        @media(min-width: $xlarge-breakpoint-width){padding: 120px 0;}
+        @media(min-width: $xlarge-breakpoint){padding: 120px 0;}
         .about-wrp{
             padding: 0;
             display: grid;
@@ -674,28 +676,28 @@ main {
                 'section-title'
                 'about-image'
                 'about-content';
-            @media(min-width: $large-breakpoint-width){
+            @media(min-width: $large-breakpoint){
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas:
                     'about-image section-title'
                     'about-image about-content';
             }
             column-gap: 60px;
-            @media(min-width: $xxlarge-breakpoint-width){column-gap: 200px;}
+            @media(min-width: $xxlarge-breakpoint){column-gap: 200px;}
             .about-image{
                 grid-area: about-image;
                 position: relative;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
-                @media(min-width: $large-breakpoint-width){justify-content: flex-start;}
+                @media(min-width: $large-breakpoint){justify-content: flex-start;}
                 .quote-box{
                     position: absolute;
                     left: 0;
                     bottom: 40px;
                     background-color: #BEEBFF;
                     padding: 15px 15px 15px 15px;
-                    @media(min-width: $xlarge-breakpoint-width){
+                    @media(min-width: $xlarge-breakpoint){
                         padding: 36px 25px 30px 36px;
                     }
                     width: 63%;
@@ -723,15 +725,21 @@ main {
                     width: auto;
                     justify-self: center;
                     padding: 12px 0;
-                    @media(min-width: $large-breakpoint-width){
+                    @media(min-width: $large-breakpoint){
                         padding: 0;
                         width: 40vw;
                         margin-left: 20px;  
                     } 
-                    @media(min-width: $xlarge-breakpoint-width){
+                    @media(min-width: $xlarge-breakpoint){
                         width: auto;
                         margin-left: 56px;
                     }
+                }
+                .squiggle{
+                    position: absolute;
+                    top: 35px;
+                    left: -33px;
+                    width: 40%;
                 }
             }
             .section-title{
@@ -743,13 +751,13 @@ main {
                     margin: 0;
                 }
                 padding-left: 12px;
-                @media(min-width: $medium-breakpoint-width){padding-left: 0;}
+                @media(min-width: $medium-breakpoint){padding-left: 0;}
             }
             .about-content{
                 grid-area: about-content;
                 padding-right: 20px;
                 padding-left: 20px;
-                @media(min-width: $medium-breakpoint-width){padding-left: 0;}
+                @media(min-width: $medium-breakpoint){padding-left: 0;}
                 
                 p{
                     color: $dark-grey-font-color;
@@ -758,7 +766,7 @@ main {
                 .about-content-buttons{
                     display: flex;
                     margin-top: 25px;
-                    @media(min-width: $large-breakpoint-width){margin-top: 70px;}
+                    @media(min-width: $large-breakpoint){margin-top: 70px;}
                     a  {
                         display: flex;
                         align-items: center;
@@ -790,13 +798,13 @@ main {
         background-color: $yellow-bg;
         padding-top: 50px; 
         padding-bottom: 50px;
-        @media(min-width: $xlarge-breakpoint-width){
+        @media(min-width: $xlarge-breakpoint){
             padding-top: 72px; padding-bottom: 120px;
         }
         .testimonials-wrp{
             padding-top: 50px;
             padding-bottom: 50px;
-            @media(min-width: $xlarge-breakpoint-width){
+            @media(min-width: $xlarge-breakpoint){
                 padding-top: 120px;
             padding-bottom: 120px;
             }
@@ -861,7 +869,7 @@ main {
                 display: flex;
                 justify-content: center;
                 margin-top: 50px;
-                @media(min-width: $xlarge-breakpoint-width){margin-top: 98px;}
+                @media(min-width: $xlarge-breakpoint){margin-top: 98px;}
             }
             .white-box{
                 background-color: $white-bg;
@@ -882,22 +890,22 @@ main {
     .team{
         background-color: $yellow-bg;
         padding-top: 50px;
-        @media(min-width: $large-breakpoint-width){padding-top: 107px;}
+        @media(min-width: $large-breakpoint){padding-top: 107px;}
         .team-wrp{
-            @media(min-width: $medium-breakpoint-width){padding: 0;}
+            @media(min-width: $medium-breakpoint){padding: 0;}
             .team-top{
                 padding-bottom: 40px;
-                @media(min-width: $large-breakpoint-width){padding-bottom: 98px;}
+                @media(min-width: $large-breakpoint){padding-bottom: 98px;}
                 display: flex;
                 flex-direction: column;
-                @media(min-width: $large-breakpoint-width){flex-direction: row;}
+                @media(min-width: $large-breakpoint){flex-direction: row;}
                 justify-content: space-between;
                 .team-button{
                     display: flex;
                     .btn-yellow{
                         border: 1px solid $black-font-color;
                         margin-top: 20px;
-                        @media(min-width: $large-breakpoint-width){margin-top: 50px;}
+                        @media(min-width: $large-breakpoint){margin-top: 50px;}
                     }
                 }
             }
@@ -910,7 +918,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    @media(min-width: $xlarge-breakpoint-width){align-items: flex-start;}
+                    @media(min-width: $xlarge-breakpoint){align-items: flex-start;}
                     h6{
                         margin-bottom: 8px;
                     }
@@ -941,24 +949,24 @@ main {
         background-color: white;
         padding-top: 50px;
         padding-bottom: 50px;
-        @media(min-width: $large-breakpoint-width){
+        @media(min-width: $large-breakpoint){
             padding-top: 116px;
             padding-bottom: 80px;
         }
         .news-wrp{
-            @media(min-width: $medium-breakpoint-width){padding: 0;}
+            @media(min-width: $medium-breakpoint){padding: 0;}
             .news-top{
                 padding-bottom: 26px;
-                // @media(min-width: $large-breakpoint-width){padding-bottom: 36px;}
+                // @media(min-width: $large-breakpoint){padding-bottom: 36px;}
                 display: flex;
                 flex-direction: column;
-                @media(min-width: $large-breakpoint-width){flex-direction: row;}
+                @media(min-width: $large-breakpoint){flex-direction: row;}
                 justify-content: space-between;
                 .news-button{
                     display: flex;
                     .btn-white{
                         margin-top: 20px;
-                        @media(min-width: $large-breakpoint-width){margin-top: 50px;}
+                        @media(min-width: $large-breakpoint){margin-top: 50px;}
                     }
                 }
             }
@@ -1022,6 +1030,56 @@ main {
             }
         }
     }
+    .newsletter{
+        padding: 70px 0 70px 0;
+        @media(min-width: $xxlarge-breakpoint){padding-top: 107px;}
+        .newsletter-wrp{
+            h2{
+                margin: 0 0 37px 0;
+                font-size: 30px;
+                @media(min-width: $medium-breakpoint){font-size: 35px;}
+                @media(min-width: $xlarge-breakpoint){font-size: 45px;}
+            }
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            @media(min-width: $xxlarge-breakpoint){
+                flex-direction: row;
+                padding: 0 50px 0 0;
+            }
+            #frmNewsletter{
+                display: flex;
+                #tbxNewsletterEmail{
+                    border: none;
+                    height: 56px;
+                    width: 308px;
+                    padding-left: 35px;
+                    padding-right: 22px;
+                    border-radius: 26px;
+                    margin-right:16px;
+                    // font-size: 14px;
+                    // @media (min-width: $medium-breakpoint){
+                    //     font-size: inherit;
+                    // }
+                    &::placeholder{
+                        color: #8C8C8C;
+                    }
+                }
+                #btnNewsletterSubscribe{
+                }
+            }
+        }
+        position: relative;
+        z-index: 0;
+        .squiggle{
+            position: absolute;
+            right: 0;
+            bottom: 58px;
+            z-index: -1;
+            display:none;
+            @media(min-width: $medium-breakpoint){display: block;}
+        }
+    }
 }
 footer{
     background-color: $black-bg;
@@ -1029,19 +1087,19 @@ footer{
         position: relative;
         padding-top: 50px;
         padding-bottom: 50px;
-        @media(min-width: $xlarge-breakpoint-width){
+        @media(min-width: $xlarge-breakpoint){
             padding-top: 114px;
             padding-bottom: 80px;
         }
         border-bottom: 1px solid #3E404D;
         .footer-top{
-            @media(min-width: $medium-breakpoint-width){padding: 0;}
+            @media(min-width: $medium-breakpoint){padding: 0;}
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             .company-presentation{
                 width: 95vw;
-                @media(min-width: $xlarge-breakpoint-width){
+                @media(min-width: $xlarge-breakpoint){
                     width: 309px;
                 }
             }
@@ -1054,11 +1112,11 @@ footer{
                 }
             .link-grid-card{
                 width: 250px;
-                @media(min-width: $small-breakpoint-width){width: 180px;}
+                @media(min-width: $small-breakpoint){width: 180px;}
                 h6{
                     color: $white-font-color;
                     margin-bottom: 12px;
-                    @media(min-width: $medium-breakpoint-width){margin-bottom: 35px;}
+                    @media(min-width: $medium-breakpoint){margin-bottom: 35px;}
                     margin-top: 18px;
                 }
                 a{
@@ -1083,14 +1141,14 @@ footer{
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 24px 12px;
-        @media(min-width: $medium-breakpoint-width){padding: 24px 0;}
+        @media(min-width: $medium-breakpoint){padding: 24px 0;}
         line-height: 30px;
         .copyright{
             color: $grey-font-color; 
         }
         .somed{
             order: -1;
-            @media(min-width: $medium-breakpoint-width){order: 0;}
+            @media(min-width: $medium-breakpoint){order: 0;}
             a{
                 color: $white-font-color;
                 margin-left: 25px;
