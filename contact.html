@@ -53,12 +53,36 @@
             </section>
 
             <section class="contact-info">
+                <div class="container-md contact-info-wrp">
+                    <div class="contact-card">
+                        <div class="contact-symbol"><i class="fa-solid fa-location-dot"></i></div>
+                        <h6>Visit us</h6>
+                        <p>Sveavägen 31<br>111 34 STOCKHOLM</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-symbol"><i class="fa-solid fa-phone"></i></div>
+                        <h6>Call us</h6>
+                        <p>+46 (8) 121 470 50<br>+46 (8) 121 470 51</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-symbol"><i class="fa-solid fa-envelope"></i></div>
+                        <h6>Email us</h6>
+                        <p>info@crito.com<br>suppor@crito.com</p>
+                    </div>
+                </div>
+
                 
                 
             </section>
             <section class="contact-form">
-                <div class="container contact-form-wrp">
-                    <h2>Leave</h2>
+                <div class="container-md contact-form-wrp">
+                    <h2>Leave us a message<br>for any information</h2>
+                    <form id="contactForm" method="post">
+                        <input type="text" id="contName" name="contName" tabindex="1" placeholder="Name*">
+                        <input type="email" id="contEmail" name="contEmail" tabindex="2" placeholder="Email*">
+                        <textarea id="msg" name="msg" tabindex="3" placeholder="Your Message*"></textarea>
+                        <button type="submit" class="btn-generic btn-yellow">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
+                    </form>
                 </div>
             </section>
             <section class="visit-map">
