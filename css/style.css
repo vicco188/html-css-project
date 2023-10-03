@@ -365,7 +365,12 @@ main .intro-section .intro-section-wrp .page-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 116px 0 93px 0;
+  margin: 30px 0 60px 0;
+}
+@media (min-width: 768px) {
+  main .intro-section .intro-section-wrp .page-heading {
+    margin: 116px 0 93px 0;
+  }
 }
 main .intro-section .intro-section-wrp .page-heading nav {
   display: flex;
@@ -401,7 +406,7 @@ main .projects {
   }
 }
 main .projects .projects-wrp h4 {
-  padding-top: 32px;
+  padding-top: 60px;
 }
 @media (min-width: 1200px) {
   main .projects .projects-wrp h4 {
@@ -1132,8 +1137,8 @@ main .testimonials .testimonials-wrp .white-box {
   background-color: #FFFFFF;
   top: 0;
   bottom: 0;
-  left: 15px;
-  right: 15px;
+  left: 8px;
+  right: 8px;
   position: absolute;
   z-index: -1;
 }

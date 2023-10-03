@@ -325,7 +325,8 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 116px 0 93px 0;
+                margin: 30px 0 60px 0;
+                @media(min-width: $medium-breakpoint){margin: 116px 0 93px 0;}
                 nav{
                     display: flex;
                     gap: 16px;
@@ -360,7 +361,7 @@ main {
         .projects-wrp{
             @media(min-width: $large-breakpoint){text-align: center;}
             h4{
-                padding-top: 32px;
+                padding-top: 60px;
                 @media(min-width: $xlarge-breakpoint){padding-top: 124px;}
             }
             h2{
@@ -912,8 +913,8 @@ main {
                 background-color: $white-bg;
                 top: 0;
                 bottom: 0;
-                left: 15px;
-                right: 15px;
+                left: 8px;
+                right: 8px;
                 @media(min-width: 1550px){
                     left: -100px;
                     right: -100px;
