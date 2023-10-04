@@ -13,60 +13,63 @@ $dark-grey-font-color: #5E5E5E;
 $grey-font-color: #B6B6BC;
 $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
-* {
+*  {
     box-sizing:border-box; 
     // border:solid 1px;  //debug only
 }
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap');
-html, body {
+html, body  {
     color: $black-font-color;
     background-color: $grey-bg;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
-h1{
+h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     padding: 0 10px 0 10px;
     text-align: center;
     font-size: 50px;
-    @media (min-width: $medium-breakpoint){
+    @media (min-width: $medium-breakpoint) {
         font-size: 56px;
     }
     letter-spacing: 1.9px;
 }
-h2{
+h2 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 35px;
-    @media(min-width: $xlarge-breakpoint){font-size: 45px;}
+    @media(min-width: $xlarge-breakpoint) {font-size: 45px;}
     letter-spacing: 1.9px;
 }
-h4 {
+h4  {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
-    @media(min-width: $xlarge-breakpoint){font-size: 18px;}
+    @media(min-width: $xlarge-breakpoint) {font-size: 18px;}
     color: #F94D1C;
     font-weight: 500;
 }
-h6{
+h6 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 22px;
 }
-p{
+p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: $dark-grey-font-color;
 }
+a  {
+    transition: all 0.25S;
+}
 
-::placeholder{
+::placeholder {
     color: #8C8C8C;
 }
 
-.btn-generic{
+.btn-generic {
     display:flex;
     color: $black-font-color;
     text-decoration:none;
@@ -77,76 +80,77 @@ p{
     border-radius: 28px;
     font-weight: 600;
     font-size: 14px;
-    @media (min-width: $medium-breakpoint){
+    @media (min-width: $medium-breakpoint) {
         font-size: inherit;
     }
-    i {
+    i  {
         margin-left:8px;
         font-size: 0.9em;
     }
-    &.btn-yellow {
+    &.btn-yellow  {
         background-color: #F9D783;
         border: 1px solid #F9D783;
     }
-    &.btn-transparent {
+    &.btn-transparent  {
         background-color: transparent;
         border: 1px solid $black-font-color;
     }
-    &.btn-grey {
+    &.btn-grey  {
         background-color: $grey-bg;
         border: 1px solid $black-font-color;
     }
-    &.btn-black {
+    &.btn-black  {
         background-color: $black-font-color;
         border: 1px solid $black-font-color;
         color: #FFFFFF;
     }
-    &.btn-white {
+    &.btn-white  {
         background-color: $white-font-color;
         border: 1px solid $black-font-color;
     }
-    &:hover{
+    &:hover {
         background-color:$hover-color;
         border-color:$hover-color;
         color: #ffffff;
     }
+    transition: all 0.3s;
 }
-.section-title{//h2+h4
+.section-title {//h2+h4
     
-    h4{
+    h4 {
         margin-bottom:15px;
-        @media(min-width: $large-breakpoint){margin-bottom:25px;}
+        @media(min-width: $large-breakpoint) {margin-bottom:25px;}
     }
 }
-.info-card{
+.info-card {
     padding-bottom: 0;
-    p{
+    p {
         margin-bottom: 0;
     }
-    h6{
+    h6 {
         margin-bottom: 10px;
         margin-top: 23px;
     }
 }
-.wrapper{
+.wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
-header{
+header {
     background-color: $grey-bg;
     padding-bottom: 10px;
-    .header-wrp{
+    .header-wrp {
         height: 100px;
-        @media(min-width: $medium-breakpoint){height: 121px;}
+        @media(min-width: $medium-breakpoint) {height: 121px;}
         display: grid;
         grid-template-columns: 70px auto;
         padding-left: 0;
         padding-right: 70px; //must be same as first column width in grid-template-columns in order to counter the burger button making logo uncentered.
         grid-template-areas:
             'header-burgerbutton header-logo';
-        @media(min-width: $medium-breakpoint){
+        @media(min-width: $medium-breakpoint) {
             grid-template-columns: 208px auto;
             grid-template-rows:50px auto;
             grid-template-areas:
@@ -155,86 +159,87 @@ header{
             padding-right: 0px;
             padding-left: 19px;
         }
-        .header-burgerbutton{
+        .header-burgerbutton {
             grid-area: header-burgerbutton;
             //background-color: rgb(184, 128, 55); // debug only
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 5px;
-            @media(min-width: $medium-breakpoint){display: none;}
+            @media(min-width: $medium-breakpoint) {display: none;}
         }
-        .header-logo{
+        .header-logo {
             display: flex;
             grid-area: header-logo;
             //background-color:#6dc9cf; //debug only
             align-items: center;
             justify-content: center;
-            @media(min-width: $medium-breakpoint){justify-content: left;}
+            @media(min-width: $medium-breakpoint) {justify-content: left;}
         }
-        .header-top{
+        .header-top {
             //background-color: pink; //debug only
             display: none;            
-            @media(min-width: $medium-breakpoint){display: flex;}
+            @media(min-width: $medium-breakpoint) {display: flex;}
             justify-content: space-between;
             //justify-content: flex-end;
-            //@media(min-width: $xlarge-breakpoint){justify-content: space-between;}
+            //@media(min-width: $xlarge-breakpoint) {justify-content: space-between;}
             align-items: center;
             border-bottom: $grey-border;
             grid-area: header-top;
-            .header-top-contactinfo{
+            .header-top-contactinfo {
                 display:flex;
                 font-size: 15px;
                 font-weight: 300;
-                a {
+                a  {
                     color: $black-font-color;
                     text-decoration: none;
-                    &:hover{color:$hover-color;}                    
+                    &:hover {color:$hover-color;}                    
                 }
-                .header-top-contactinfo-contact{
+                .header-top-contactinfo-contact {
                     border-left: $grey-border;
                     padding: 5px 0 2px 15px;
                     margin-left: 40px;                    
-                    &#firstcontact{
+                    &#firstcontact {
                         border-left: none;
                         padding-left: 0;
                         margin-left: 0;
                     }
-                    &#lastcontact{
+                    &#lastcontact {
                         display: none;
-                        @media(min-width: $xlarge-breakpoint){display: block;}                        
+                        @media(min-width: $xlarge-breakpoint) {display: block;}                        
                     }
-                    i {padding-right: 8px;}                    
+                    i  {padding-right: 8px;}                    
                 }
             }
-            .header-top-somedicons{                
-                a{
+            .header-top-somedicons {                
+                a {
                     color: $black-font-color;
                     padding-left:15px;
-                    &:hover{
+                    &:hover {
                         color:$hover-color;
                     }
                 }
             }
         }
-        .header-bottom {
+        .header-bottom  {
             //background-color: aquamarine; //debug only
             display: none;
-            @media(min-width: $medium-breakpoint){display: flex;}
+            @media(min-width: $medium-breakpoint) {display: flex;}
             justify-content: space-between;
             align-items: flex-end;
             // align-items:center;
-            // @media(min-width: $xlarge-breakpoint){align-items: end;}
+            // @media(min-width: $xlarge-breakpoint) {align-items: end;}
             grid-area: header-bottom;
-            nav{
+            nav {
                 width: 300px;
                 display: flex;
                 justify-content: space-between;
                 font-size:16px;
-                font-weight: 400;                
-                .current-nav, a:hover {//underline nav words...
+                font-weight: 400;
+                .current-nav {font-weight: 500;}                
+                .current-nav, a:hover  { // underline nav words...
                     position: relative;
-                    &::before {
+                    &::before  {
                       content: ""; // dummy element 
                       position: absolute;
                       bottom: -3px; // dist below word
@@ -244,12 +249,12 @@ header{
                       border-bottom: 2px solid $black-font-color;
                     }
                 }
-                a{
+                a {
                     color:$black-font-color;
                     text-decoration: none;
-                    &:hover{
+                    &:hover {
                         color:$hover-color;
-                        &::before{
+                        &::before {
                             border-bottom: 2px solid $hover-color;
                         }
                     }                    
@@ -258,97 +263,97 @@ header{
         }
     }
 }
-main {
-    .intro-section{
+main  {
+    .intro-section {
         position: relative;
         background-color:$grey-bg;
         z-index: 0;
-        .intro-section-wrp{
+        .intro-section-wrp {
             display: flex;
             justify-content: center;
             padding:20px 0 20px 0;
-            @media(min-width: $xlarge-breakpoint){padding: 0;}
-            .showcase-content{
+            @media(min-width: $xlarge-breakpoint) {padding: 0;}
+            .showcase-content {
                 gap: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                h1{
-                    @media (min-width: $xlarge-breakpoint){
+                h1 {
+                    @media (min-width: $xlarge-breakpoint) {
                         font-size: 96px;
                         text-align: inherit;
                         letter-spacing: 1px;
                     }
                 }
-                .showcase-paragraph{
+                .showcase-paragraph {
                     font-family: 'Inter', sans-serif;
                     font-weight: 300;
                     font-size: 20px;
                     color: #5A5957;
                     padding: 0 10px 0 10px;
                     text-align: center;
-                    @media (min-width: $xlarge-breakpoint){
+                    @media (min-width: $xlarge-breakpoint) {
                         text-align:inherit;
                         padding: 0px;
                     }
                 }
-                .showcase-content-buttons{
+                .showcase-content-buttons {
                     display: flex;
                     gap: 20px;
                     justify-content: center;
-                    @media (min-width: $xlarge-breakpoint){
+                    @media (min-width: $xlarge-breakpoint) {
                         justify-content: flex-start;
                     }
                 } 
             }
-            .showcase-picture{
+            .showcase-picture {
                 position: relative;
-                .showcase-picture-main{
+                .showcase-picture-main {
                     display: none;
-                    @media (min-width: $xlarge-breakpoint){
+                    @media (min-width: $xlarge-breakpoint) {
                         display: block;
                         padding-right:100px;
                         padding-top: 50px;
                     }
                 }
-                .showcase-picture-squiggle{
+                .showcase-picture-squiggle {
                     position:absolute;
                     right: -65px;
                     top: 375px;
                     display: none;
-                    @media(min-width: $xlarge-breakpoint){display:block;}
+                    @media(min-width: $xlarge-breakpoint) {display:block;}
                 }
             }
-            .page-heading{
+            .page-heading {
                 justify-self: center;
                 align-self: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin: 30px 0 60px 0;
-                @media(min-width: $medium-breakpoint){margin: 116px 0 93px 0;}
-                nav{
+                @media(min-width: $medium-breakpoint) {margin: 116px 0 93px 0;}
+                nav {
                     display: flex;
                     gap: 16px;
-                    a{
+                    a {
                         font-weight: 300;
                         text-decoration: none;
                         color: $black-font-color;
-                        &:hover{
+                        &:hover {
                             color: $hover-color;
                         }
                     }
-                    span{
+                    span {
                         font-weight: 500;
                     }
                 }
-                h2{
+                h2 {
                     margin-top: 25px;
                 }
 
             }
         }
-        .intro-white-squiggle{
+        .intro-white-squiggle {
             position: absolute;
             bottom: 0;
             display: block;
@@ -356,167 +361,171 @@ main {
             width: min(836px, 70vw);
         }
     }
-    .projects{
+    .projects {
         background-color: $white-bg;
-        .projects-wrp{
-            @media(min-width: $large-breakpoint){text-align: center;}
-            h4{
+        .projects-wrp {
+            @media(min-width: $large-breakpoint) {text-align: center;}
+            h4 {
                 padding-top: 60px;
-                @media(min-width: $xlarge-breakpoint){padding-top: 124px;}
+                @media(min-width: $xlarge-breakpoint) {padding-top: 124px;}
             }
-            h2{
+            h2 {
                 margin-bottom: 32px;
-                @media(min-width: $xlarge-breakpoint){margin-bottom:86px;}
+                @media(min-width: $xlarge-breakpoint) {margin-bottom:86px;}
             }
-            .projects-grid{
+            .projects-grid {
                 display: grid;
                 grid-template-columns: 1fr;
-                @media(min-width: $large-breakpoint){grid-template-columns: 1fr 1fr;}
+                @media(min-width: $large-breakpoint) {grid-template-columns: 1fr 1fr;}
                 gap: 30px;
-                .projects-grid-card{
+                .projects-grid-card {
                     color: $black-font-color;
                     text-decoration: none;
                     display: grid;
                     grid-template-rows: auto 1fr auto;
                     
-                    img {
+                    img  {
                         width: 100%;
                         height: auto;
                     }
-                    h6{
+                    h6 {
                         text-align: start;
                         border-bottom: 3px solid #E7E7E7;
                         padding-bottom: 12px;
                         padding-top: 12px;
                         margin-bottom: 12px;
-                        @media(min-width: $xlarge-breakpoint){
+                        @media(min-width: $xlarge-breakpoint) {
                             padding-top: 38px;
                             margin-bottom: 38px;
                         }
                     }
-                    &:hover{
-                        .readmorelink, h6{
-                        color: $hover-color;
-                        }
-                    }
-                    .readmorelink{
+                    .readmorelink {
                         text-align: end;
                         font-size: 14px;
                         font-weight: 500px;
-                        i{margin-left:5px;}
+                        i {margin-left:5px;}
                         color: $black-font-color;
+                    }
+                    .readmorelink, h6 {
+                        transition: all 0.2s;
+                    }
+                    &:hover {
+                        .readmorelink, h6 {
+                        color: $hover-color;
+                        
+                        }
                     }
                 }
             }
-            .projects-button{
+            .projects-button {
                 display:flex;
                 justify-content: center;
                 padding: 10px 0 40px 0;
-                @media(min-width: $xlarge-breakpoint){padding: 70px 0 90px 0;}
+                @media(min-width: $xlarge-breakpoint) {padding: 70px 0 90px 0;}
             }
         }
     }
-    .brand-display{
+    .brand-display {
         background-color: $white-bg;
         padding-top: 18px; padding-bottom: 18px;
-        @media(min-width: $medium-breakpoint){padding-top: 36px; padding-bottom:36px}
-        @media(min-width:$xlarge-breakpoint){padding-top: 96px; padding-bottom:105px;}
-        .container-md{
+        @media(min-width: $medium-breakpoint) {padding-top: 36px; padding-bottom:36px}
+        @media(min-width:$xlarge-breakpoint) {padding-top: 96px; padding-bottom:105px;}
+        .container-md {
             display: flex;
             justify-content: space-between;
             padding-left: 20px;
             padding-right:20px;
-            @media(min-width: $xlarge-breakpoint){
+            @media(min-width: $xlarge-breakpoint) {
                 padding-left: 40px;
                 padding-right:40px;
             }
-            img {
+            img  {
                 width: 17%;
                 height: auto;
-                @media(min-width: $small-breakpoint){width:15%;}
-                @media(min-width: $xlarge-breakpoint){
+                @media(min-width: $small-breakpoint) {width:15%;}
+                @media(min-width: $xlarge-breakpoint) {
                     height: 100%;
                     width: auto;        
                 }
             }
         }
     }
-    .features{
+    .features {
         background-color: $white-bg;
-        .features-wrp{
+        .features-wrp {
                 position:relative;
                 z-index: 0;
-                .grey-rectangle{
+                .grey-rectangle {
                     border: 1px solid #D1D1D1;
                     position: absolute;
                     top: 0;
                     bottom: 0;
                     left: -20px; right: -20px;
                     display:none;
-                    @media(min-width: 800px){display: block;}
-                    @media(min-width: 1600px){left: -100px; right: -100px;}
+                    @media(min-width: 800px) {display: block;}
+                    @media(min-width: 1600px) {left: -100px; right: -100px;}
                     z-index: -1;
                 }
                 padding-top: 30px; padding-bottom: 30px;
-                @media(min-width: $medium-breakpoint){
+                @media(min-width: $medium-breakpoint) {
                     padding-top: 60px; padding-bottom: 60px;
                 }
-                @media(min-width: $xlarge-breakpoint){
+                @media(min-width: $xlarge-breakpoint) {
                     padding-top: 80px; padding-bottom: 100px;
                 }
             display: grid;
             grid-template-columns: 1fr;
-            @media(min-width: $large-breakpoint){grid-template-columns: 19fr 31fr;}
-            .features-left{
-                h2{
+            @media(min-width: $large-breakpoint) {grid-template-columns: 19fr 31fr;}
+            .features-left {
+                h2 {
                     margin-bottom: 40px;
                 }
-                .features-button{
+                .features-button {
                     display: flex;
                     padding-left: 20px;
-                    @media(min-width: $large-breakpoint){padding-left: 0;}
-                    .btn-generic{
+                    @media(min-width: $large-breakpoint) {padding-left: 0;}
+                    .btn-generic {
                         display: flex;
                         justify-content: center;
                         width: 250px;
-                        @media(min-width: $large-breakpoint){width: 94%;}
-                        a{
+                        @media(min-width: $large-breakpoint) {width: 94%;}
+                        a {
                             color: $black-font-color;
                             text-decoration: none;
                         }
                     }
                 }
             }
-            .features-right{
+            .features-right {
                 display: flex;
                 justify-content: center;
                 padding-top: 35px;
-                .features-right-grid{
+                .features-right-grid {
                     display: grid;
                     row-gap: 66px;
                     grid-template-columns: 1fr;
-                    @media(min-width: $small-breakpoint){grid-template-columns: 1fr 1fr;}
+                    @media(min-width: $small-breakpoint) {grid-template-columns: 1fr 1fr;}
                     column-gap: 72px;
-                    @media(min-width: $medium-breakpoint){column-gap: 144px;}
-                    @media(min-width: $large-breakpoint){column-gap: 36px;}
-                    @media(min-width: $xlarge-breakpoint){column-gap: 72px;}
-                    @media(min-width: $xxlarge-breakpoint){column-gap: 144px;}
-                    .info-card{
+                    @media(min-width: $medium-breakpoint) {column-gap: 144px;}
+                    @media(min-width: $large-breakpoint) {column-gap: 36px;}
+                    @media(min-width: $xlarge-breakpoint) {column-gap: 72px;}
+                    @media(min-width: $xxlarge-breakpoint) {column-gap: 144px;}
+                    .info-card {
                         width: 80vw;
                         position:relative;
-                        @media(min-width: $small-breakpoint){width: 227px;}
+                        @media(min-width: $small-breakpoint) {width: 227px;}
                         
-                        .icon-sparkles-a{
+                        .icon-sparkles-a {
                             position: absolute;
                             left: 15px;
                             top: -6px;
                         }
-                        .icon-sparkles-b{
+                        .icon-sparkles-b {
                             position: absolute;
                             left: 38px;
                             top: -2px;
                         }
-                        .icon-sparkles-c{
+                        .icon-sparkles-c {
                             position: absolute;
                             left: 46px;
                             top: 10px;
@@ -526,100 +535,104 @@ main {
             }
         }
     }
-    .services{
+    .services {
         background-color: $grey-bg;
         position: relative;
         z-index: 0;   
-        .services-wrp{
+        .services-wrp {
             padding: 20px 12px;
-            @media(min-width: $medium-breakpoint){padding: 50px 0;}
-            @media(min-width: $xlarge-breakpoint){padding: 120px 0;}
-            .section-title{
-                h2{
+            @media(min-width: $medium-breakpoint) {padding: 50px 0;}
+            @media(min-width: $xlarge-breakpoint) {padding: 120px 0;}
+            .section-title {
+                h2 {
                     margin-bottom: 10px;
-                    @media(min-width: $large-breakpoint){margin-bottom: 40px;}
+                    @media(min-width: $large-breakpoint) {margin-bottom: 40px;}
                 }
             }
-            .services-grid{
+            .services-grid {
                 display: grid;
                 gap: 15px;
                 padding:20px;
                 grid-template-columns: minmax(200px, 1fr);
-                @media(min-width: $small-breakpoint){
+                @media(min-width: $small-breakpoint) {
                     grid-template-columns: repeat(2, minmax(200px, 1fr));
                     gap:20px;
                 }
-                @media(min-width: $large-breakpoint){
+                @media(min-width: $large-breakpoint) {
                     grid-template-columns: repeat(4, minmax(200px, 1fr));
                     padding:0;
                 }
-                @media(min-width: $xlarge-breakpoint){
+                @media(min-width: $xlarge-breakpoint) {
                     gap:30px;
                 }
-                .info-card{
+                .info-card {
                     background-color: $white-bg;
-                    &:hover{
+                    &:hover {
                        background-color: #F9D783;
-                        .btn-black{
+                        .btn-black {
                             background-color: $white-bg;
                             color: $black-font-color;
                             border: none;
                         }                        
                     }
-                    a{
+                    transition: background-color 0.4s ease-in-out;
+                    a {
                         color: inherit;
                         text-decoration: none;
-                        &.btn-black{color: $white-font-color;}
+                        &.btn-black {color: $white-font-color;}
                     }
                     padding: 30px 30px;
-                    @media(min-width: $xlarge-breakpoint){padding: 48px 30px;}
-                    .info-card-line{
+                    @media(min-width: $xlarge-breakpoint) {padding: 48px 30px;}
+                    .info-card-line {
                         width:39px;
                         border: 1px solid $black-font-color;
                     }
-                    h6{
+                    h6 {
                         margin-top:40px;
                     }
-                    p{
+                    p {
                         line-height: 28px;
                     }
-                    .service-button{
+                    .service-button {
                         display: flex;
                         justify-content: flex-end;
                         margin-top:20px;
-                        .btn-generic{
+                        .btn-generic {
                             width: 56px;
                             justify-content: center;
                             padding: 2px 8px 0 0;
+                            transition:
+                                background-color 0.3s ease-in-out,
+                                color 0.3s ease-in-out;
                         }
-                        .btn-white{
+                        .btn-white {
                             border:none;
                         }
                     }
                 }
             }
-            .services-button{
+            .services-button {
                 display:flex;
                 justify-content: center;
                 padding-top: 10px;
-                @media(min-width: $xlarge-breakpoint){padding-top: 50px;}
+                @media(min-width: $xlarge-breakpoint) {padding-top: 50px;}
             }
         }
-        .services-white-squiggle{
+        .services-white-squiggle {
             position: absolute;
             right: 0;
             bottom: 0;
             z-index: -1;
             display: none;
-            @media(min-width: 300px){display: block;}
+            @media(min-width: 300px) {display: block;}
         }
     }
-    .whychooseus{
+    .whychooseus {
         background-color: $white-bg;
         padding-top: 64px;
         position: relative;
         z-index: 0;
-        .whychooseus-wrp{
+        .whychooseus-wrp {
             display: grid;
             grid-template-areas:
                 'section-title'
@@ -627,86 +640,86 @@ main {
                 'whychooseus-content';
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto;
-            @media(min-width: $large-breakpoint){
+            @media(min-width: $large-breakpoint) {
                 grid-template-areas: 
                     'section-title whychooseus-picture'
                     'whychooseus-content whychooseus-picture';
                 grid-template-columns: 50% 1fr;
                 grid-template-rows: 1fr;
             }
-            @media(min-width: $xlarge-breakpoint){grid-template-columns: 40% 1fr;}
-            @media(min-width: $xxlarge-breakpoint){grid-template-columns: 33% 1fr;}
+            @media(min-width: $xlarge-breakpoint) {grid-template-columns: 40% 1fr;}
+            @media(min-width: $xxlarge-breakpoint) {grid-template-columns: 33% 1fr;}
             justify-content: space-between;
-            .section-title{
+            .section-title {
                 grid-area: section-title;
                 background-color: rgba(255, 255, 255, 0.7);
             }
-            .whychooseus-content{
+            .whychooseus-content {
                 grid-area: whychooseus-content;
                 background-color: rgba(255, 255, 255, 0.7);
-                .whychooseus-content-cards{
-                    .whychooseus-content-card{
+                .whychooseus-content-cards {
+                    .whychooseus-content-card {
                         padding-top: 40px;
                         display: flex;
-                        @media(min-width: $small-breakpoint){padding-left: 30px;}
-                        @media(min-width: $large-breakpoint){padding-left: inherit;}
-                        .whychooseus-content-card-icon{
-                            img{
+                        @media(min-width: $small-breakpoint) {padding-left: 30px;}
+                        @media(min-width: $large-breakpoint) {padding-left: inherit;}
+                        .whychooseus-content-card-icon {
+                            img {
                                 border: 1px solid #e7e7e7;
                                 border-radius: 50px;
                                 padding: 13px;
                             }
                         }
-                        .info-card{
+                        .info-card {
                             margin-left: 30px;
-                            h6{
+                            h6 {
                                 margin-top: 0;
                             }
                         }
                     }
                 }
             }
-            .whychooseus-picture{
+            .whychooseus-picture {
                 grid-area:whychooseus-picture;
                 position: relative;
                 display: flex;
                 justify-content: center;;
-                img{
+                img {
                     width: 85vw;
                     position: static;
-                    @media(min-width: $large-breakpoint){
+                    @media(min-width: $large-breakpoint) {
                         position: absolute;
                         right: 0; 
                         bottom: 15px;
                         width: 50vw;
                         height: auto;
                     }
-                    @media(min-width: $xlarge-breakpoint){bottom: 25px; width: auto;}
-                    @media(min-width: $xxlarge-breakpoint){bottom: 98px;}
+                    @media(min-width: $xlarge-breakpoint) {bottom: 25px; width: auto;}
+                    @media(min-width: $xxlarge-breakpoint) {bottom: 98px;}
                     z-index: -1;
                     height: 100%;
-                    @media(min-width: $xlarge-breakpoint){height: auto;}
+                    @media(min-width: $xlarge-breakpoint) {height: auto;}
                 }
             }
         }
-        .grey-box{
+        .grey-box {
             background-color: $grey-bg;
             position: absolute;
             display: none;
-            @media(min-width: $xlarge-breakpoint){display: block;}
+            @media(min-width: $xlarge-breakpoint) {display: block;}
             bottom: 0;
             right: 0;
             z-index: -2;
             top: 270px;
             width: calc(50vw + 100px);
-            @media(min-width: $xxlarge-breakpoint){width: calc(50vw + 115px);}
+            @media(min-width: $xxlarge-breakpoint) {width: calc(50vw + 115px);}
         }
     }
-    .about{
+    .about {
         background-color: $white-bg;
         padding: 30px 0;
-        @media(min-width: $xlarge-breakpoint){padding: 120px 0;}
-        .about-wrp{
+        @media(min-width: $xlarge-breakpoint) {padding: 120px 0;}
+        .about-wrp {
             padding: 0;
             display: grid;
             grid-template-columns: 1fr;
@@ -714,109 +727,112 @@ main {
                 'section-title'
                 'about-image'
                 'about-content';
-            @media(min-width: $large-breakpoint){
+            @media(min-width: $large-breakpoint) {
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas:
                     'about-image section-title'
                     'about-image about-content';
             }
             column-gap: 60px;
-            @media(min-width: $xxlarge-breakpoint){column-gap: 200px;}
-            .about-image{
+            @media(min-width: $xxlarge-breakpoint) {column-gap: 200px;}
+            .about-image {
                 grid-area: about-image;
                 position: relative;
                 overflow: hidden;
+                @media(min-width: $medium-breakpoint){overflow: visible;}
                 display: flex;
                 justify-content: center;
-                @media(min-width: $large-breakpoint){justify-content: flex-start;}
-                .quote-box{
+                @media(min-width: $large-breakpoint) {justify-content: flex-start;}
+                .quote-box {
+                    z-index:1;
+                    box-shadow: -20px 30px 35px 0 rgba(0, 0, 0, 0.04);
                     position: absolute;
                     left: 0;
                     bottom: 40px;
                     background-color: #BEEBFF;
                     padding: 15px 15px 15px 15px;
-                    @media(min-width: $xlarge-breakpoint){
+                    @media(min-width: $xlarge-breakpoint) {
                         padding: 36px 25px 30px 36px;
                     }
                     width: 63%;
-                    .qb-h1{
+                    .qb-h1 {
                         font-family: 'DM Sans', sans-serif;
                         font-weight: 700;
                         font-size: 20px;
                         color: $black-font-color
                     }
-                    .qb-h2{
+                    .qb-h2 {
                         font-family: 'DM Sans', sans-serif;
                         font-weight: 700;
                         font-size: 16px;
                         color: #F94D1C
                     }
-                    p{
+                    p {
                         font-family: 'Inter', sans-serif;
                         font-size: 16px;
                         font-weight: 500;
                         font-style: italic;
                         margin-top: 19px;
                     }
+                    
                 }
-                img{
+                img {
                     width: auto;
                     justify-self: center;
                     padding: 12px 0;
-                    @media(min-width: $large-breakpoint){
+                    @media(min-width: $large-breakpoint) {
                         padding: 0;
                         width: 40vw;
                         margin-left: 20px;  
                     } 
-                    @media(min-width: $xlarge-breakpoint){
+                    @media(min-width: $xlarge-breakpoint) {
                         width: auto;
                         margin-left: 56px;
                     }
                 }
-                .squiggle{
+                .squiggle {
                     position: absolute;
                     top: 35px;
                     left: -33px;
                     width: 40%;
                 }
             }
-            .section-title{
+            .section-title {
                 grid-area: section-title;
-                h4{
+                h4 {
                     margin-bottom: 20px;
                 }
-                h2{
+                h2 {
                     margin: 0;
                 }
                 padding-left: 12px;
-                @media(min-width: $medium-breakpoint){padding-left: 0;}
+                @media(min-width: $medium-breakpoint) {padding-left: 0;}
             }
-            .about-content{
+            .about-content {
                 grid-area: about-content;
                 padding-right: 20px;
                 padding-left: 20px;
-                @media(min-width: $medium-breakpoint){padding-left: 0;}
-                
-                p{
+                @media(min-width: $medium-breakpoint) {padding-left: 0;}
+                p {
                     color: $dark-grey-font-color;
                     line-height: 32px;
                 }
-                .about-content-buttons{
+                .about-content-buttons {
                     display: flex;
                     margin-top: 25px;
-                    @media(min-width: $large-breakpoint){margin-top: 70px;}
-                    a  {
+                    @media(min-width: $large-breakpoint) {margin-top: 70px;}
+                    a   {
                         display: flex;
                         align-items: center;
                         text-decoration: none;
-                        span {
+                        span  {
                             color: $black-font-color;
                             font-size: 16px;
                             font-family: 'Inter', sans-serif;
                             font-weight: 600;
                         }
                     }
-                    .fa-play{
+                    .fa-play {
                         width: 56px;
                         padding: 0;
                         font-size: 12px;
@@ -830,41 +846,41 @@ main {
             }
         }
     }
-    .testimonials{
+    .testimonials {
         background-color: $yellow-bg;
         padding-top: 50px; 
         padding-bottom: 50px;
-        @media(min-width: $xlarge-breakpoint){
+        @media(min-width: $xlarge-breakpoint) {
             padding-top: 72px; padding-bottom: 120px;
         }
-        .testimonials-wrp{
+        .testimonials-wrp {
             padding-top: 50px;
             padding-bottom: 50px;
-            @media(min-width: $xlarge-breakpoint){
+            @media(min-width: $xlarge-breakpoint) {
                 padding-top: 120px;
             padding-bottom: 120px;
             }
             position: relative;
             z-index: 0;
-            .section-title{
+            .section-title {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 86px;
             }
-            .testimonials-grid{
+            .testimonials-grid {
                 display: grid;
                 column-gap: 51px;
                 row-gap: 70px;
                 grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-                .testimonial-card{
+                .testimonial-card {
                     padding: 0 30px;
-                    .rating{
+                    .rating {
                         color: #F94D1C;
                         letter-spacing: 5px;
                         font-size: 0.9rem;
                     }
-                    p{
+                    p {
                         color: $black-font-color;
                         font-size: 18px;
                         font-weight: 600;
@@ -872,17 +888,17 @@ main {
                         margin: 26px 0 34px;
                         line-height: 34px;
                     }
-                    .testifier-byline{
+                    .testifier-byline {
                         display: grid;
                         grid-template-columns: 70px 1fr;
                         column-gap: 16px;
                         grid-template-areas:
                             'tpicture   tname'
                             'tpicture   ttitle';
-                        .testifier-picture{
+                        .testifier-picture {
                             grid-area: tpicture;
                         }
-                        .testifier-name{
+                        .testifier-name {
                             grid-area: tname;
                             font-family: 'DM Sans', sans-serif;
                             font-size: 22px;
@@ -891,7 +907,7 @@ main {
                             display: flex;
                             align-items: end;
                         }
-                        .testifier-title{
+                        .testifier-title {
                             grid-area: ttitle;
                             font-family: 'Inter', sans-serif;
                             font-size: 16px;
@@ -901,19 +917,19 @@ main {
                     }
                 }
             }
-            .testimonials-button{
+            .testimonials-button {
                 display: flex;
                 justify-content: center;
                 margin-top: 50px;
-                @media(min-width: $xlarge-breakpoint){margin-top: 98px;}
+                @media(min-width: $xlarge-breakpoint) {margin-top: 98px;}
             }
-            .white-box{
+            .white-box {
                 background-color: $white-bg;
                 top: 0;
                 bottom: 0;
                 left: 8px;
                 right: 8px;
-                @media(min-width: 1550px){
+                @media(min-width: 1550px) {
                     left: -100px;
                     right: -100px;
                     width: auto;   
@@ -923,114 +939,122 @@ main {
             }
         }
     }
-    .team{
+    .team {
         background-color: $yellow-bg;
         padding-top: 50px;
-        @media(min-width: $large-breakpoint){padding-top: 107px;}
-        .team-wrp{
-            @media(min-width: $medium-breakpoint){padding: 0;}
-            .team-top{
+        @media(min-width: $large-breakpoint) {padding-top: 107px;}
+        .team-wrp {
+            @media(min-width: $medium-breakpoint) {padding: 0;}
+            .team-top {
                 padding-bottom: 40px;
-                @media(min-width: $large-breakpoint){padding-bottom: 98px;}
+                @media(min-width: $large-breakpoint) {padding-bottom: 98px;}
                 display: flex;
                 flex-direction: column;
-                @media(min-width: $large-breakpoint){flex-direction: row;}
+                @media(min-width: $large-breakpoint) {flex-direction: row;}
                 justify-content: space-between;
-                .team-button{
+                .team-button {
                     display: flex;
-                    .btn-yellow{
+                    .btn-yellow {
                         border: 1px solid $black-font-color;
                         margin-top: 20px;
-                        @media(min-width: $large-breakpoint){margin-top: 50px;}
+                        @media(min-width: $large-breakpoint) {margin-top: 50px;}
+                        &:hover {border: none;}
                     }
                 }
             }
-            .team-mid{
+            .team-mid {
                 max-height: 525px; overflow: hidden;
                 display: grid;
                 gap: 30px;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                .team-member{
+                .team-member {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    @media(min-width: $xlarge-breakpoint){align-items: flex-start;}
-                    h6{
+                    @media(min-width: $xlarge-breakpoint) {align-items: flex-start;}
+                    h6 {
                         margin-bottom: 8px;
                     }
-                    p{
+                    p {
                         font-weight: 500;
                     }
-                    img{
+                    img {
                         margin-bottom: 30px;
                     }
                 }
             }
-            .team-bottom{
+            .team-bottom {
                 display: flex;
                 justify-content: center;
                 padding-top: 25px;
-                i{
+                i {
                     color: #C2AA70;
                     font-size: 12px;
                     margin: 5px;
-                    &.active{
+                    &.active {
                         color: $black-font-color;
                     }
                 }
             }
         }
     }
-    .news{
+    .news {
         background-color: white;
         padding-top: 50px;
         padding-bottom: 50px;
-        @media(min-width: $large-breakpoint){
+        @media(min-width: $large-breakpoint) {
             padding-top: 116px;
             padding-bottom: 80px;
         }
-        .news-wrp{
-            @media(min-width: $medium-breakpoint){padding: 0;}
-            .news-top{
+        .news-wrp {
+            @media(min-width: $medium-breakpoint) {padding: 0;}
+            .news-top {
                 padding-bottom: 26px;
-                // @media(min-width: $large-breakpoint){padding-bottom: 36px;}
+                // @media(min-width: $large-breakpoint) {padding-bottom: 36px;}
                 display: flex;
                 flex-direction: column;
-                @media(min-width: $large-breakpoint){flex-direction: row;}
+                @media(min-width: $large-breakpoint) {flex-direction: row;}
                 justify-content: space-between;
-                .news-button{
+                .news-button {
                     display: flex;
-                    .btn-white{
+                    .btn-white {
                         margin-top: 20px;
-                        @media(min-width: $large-breakpoint){margin-top: 50px;}
+                        @media(min-width: $large-breakpoint) {margin-top: 50px;}
                     }
                 }
             }
-            .news-mid{
+            .news-mid {
                 max-height: 450px; overflow: hidden;
                 display: grid;
                 gap: 30px;
                 grid-template-columns: repeat(auto-fit, minmax(200px, 420px));
                 // align-items: center;
                 justify-content: center;
-                .news-card{
+                .news-card {
                     color: inherit;
                     text-decoration: none;
-                    &:hover{
-                        .article-intro, .article-heading{color: $hover-color;}
+                    &:hover {
+                        .article-intro, .article-heading {color: $hover-color;}
+                        .datebox{
+                            background-color: $black-bg;
+                            p, h6 {color: $white-font-color;}
+                        }
                     }
                     min-height: 436px;
                     position: relative;
-                    .article-heading{
+                    .article-heading {
                         margin-bottom: 18px;
                     }
-                    .article-intro{
+                    .article-intro {
                         line-height: 28px;
                     }
-                    img{
+                    .article-intro, .article-heading {
+                        transition: color 0.2s;
+                    }
+                    img {
                         margin-bottom: 24px;
                     }
-                    .datebox{
+                    .datebox {
                         width: 56px;
                         height: 64px;
                         background-color: #F9D783;
@@ -1041,51 +1065,53 @@ main {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        h6{
+                        h6 {
                             margin-bottom: -5px;
                             margin-top: 21px;
                         }
+                        transition: background-color 0.3s ease-in-out;
+                        h6, p {transition: color 0.2s ease-in-out;}
                     }
                 }
             }
-            .news-bottom{
+            .news-bottom {
                 display: flex;
                 justify-content: center;
                 padding-top: 44px;
-                i{
+                i {
                     color: #D1D1D1;
                     font-size: 12px;
                     margin: 7px;
-                    &.active{
+                    &.active {
                         color: $black-font-color;
                     }
                 }
             }
         }
     }
-    .newsletter{
+    .newsletter {
         padding: 70px 0 70px 0;
-        @media(min-width: $xxlarge-breakpoint){padding-top: 107px;}
-        .newsletter-wrp{
-            h2{
+        @media(min-width: $xxlarge-breakpoint) {padding-top: 107px;}
+        .newsletter-wrp {
+            h2 {
                 margin: 0 0 37px 0;
                 font-size: 30px;
-                @media(min-width: $medium-breakpoint){font-size: 35px;}
-                @media(min-width: $xlarge-breakpoint){font-size: 45px;}
+                @media(min-width: $medium-breakpoint) {font-size: 35px;}
+                @media(min-width: $xlarge-breakpoint) {font-size: 45px;}
             }
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            @media(min-width: $xxlarge-breakpoint){
+            @media(min-width: $xxlarge-breakpoint) {
                 flex-direction: row;
                 padding: 0 50px 0 0;
             }
-            #frmNewsletter{
+            #frmNewsletter {
                 display: flex;
                 flex-direction: column;
                 row-gap: 20px;
-                @media(min-width: $medium-breakpoint){flex-direction: row;}
-                #tbxNewsletterEmail{
+                @media(min-width: $medium-breakpoint) {flex-direction: row;}
+                #tbxNewsletterEmail {
                     border: none;
                     height: 56px;
                     width: 308px;
@@ -1095,7 +1121,7 @@ main {
                     border-radius: 26px;
                     margin-right:16px;
                 }
-                #btnNewsletterSubscribe{
+                #btnNewsletterSubscribe {
                     max-width: 170px;
                     // max-width:90vw;
                 }
@@ -1103,27 +1129,27 @@ main {
         }
         position: relative;
         z-index: 0;
-        .squiggle{
+        .squiggle {
             position: absolute;
             right: 0;
             bottom: 58px;
             z-index: -1;
             display:none;
-            @media(min-width: $medium-breakpoint){display: block;}
+            @media(min-width: $medium-breakpoint) {display: block;}
         }
     }
-    .contact-info{
+    .contact-info {
         background-color: $white-bg;
         padding-top: 60px;
-        @media(min-width: $xlarge-breakpoint){padding-top: 120px;}
-        .contact-info-wrp{
+        @media(min-width: $xlarge-breakpoint) {padding-top: 120px;}
+        .contact-info-wrp {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            //@media(min-width: $xlarge-breakpoint){grid-template-columns: 1fr 1fr 1fr;}
-            
             gap: 30px;
-            @media(min-width: $medium-breakpoint){padding: 0;}
-            .contact-card{
+            @media(min-width: $medium-breakpoint) {padding: 0;}
+            .contact-card {
+                text-decoration: none;
+                color: $black-font-color;
                 border: 1px solid #D1D1D1;
                 display: grid;
                 grid-template-columns: 84px 1fr;
@@ -1134,7 +1160,13 @@ main {
                 padding-top: 48px;
                 padding-bottom: 38px;
                 padding-left: 14%;
-                .contact-symbol{
+                &:hover{
+                    .contact-symbol {
+                        animation: shakeMe 2s infinite;
+                        box-shadow: 0 0 30px 0 rgb(191, 221, 255);
+                    }
+                }
+                .contact-symbol {
                     grid-area: symbol;
                     height: 60px;
                     width: 60px;
@@ -1145,58 +1177,85 @@ main {
                     align-items: center;
                     justify-content: center;
                     font-size: 20px;
+                    transition: box-shadow 0.4s;
+                    @keyframes shakeMe {
+                        20% {
+                            transform: rotate(0deg);                           
+                        }
+                        24% {
+                            transform: rotate(30deg);
+                        }
+                        28% {
+                            transform: rotate(-30deg);
+                        }
+                        32% {
+                            transform: rotate(20deg);
+                        }
+                        36% {
+                            transform: rotate(-20deg);
+                        }
+                        40% {
+                            transform: rotate(10deg);                            
+                        }
+                        44% {
+                            transform: rotate(-10deg);                            
+                        }
+                        48% {
+                            transform: rotate(0deg);                            
+                        }
+                    }
                 }
-                p{
+                p {
                     grid-area: txt;
                     font-size: 18px;
                     line-height: 28px;
                     color: #474747;
                 }
-                h6{
+                h6 {
                     grid-area: heading;
                     margin-bottom: 24px;
                 }
             }
         }
     }    
-    .contact-form{
+    .contact-form {
         background-color: $white-bg;
         padding: 60px 0 0 0;
-        @media(min-width: $medium-breakpoint){padding: 84px 0 116px 0;}
-        .contact-form-wrp{
+        @media(min-width: $medium-breakpoint) {padding: 84px 0 116px 0;}
+        .contact-form-wrp {
             background-color: $grey-bg;
                      
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 60px 0 60px 0;
-            @media(min-width: $medium-breakpoint){
+            @media(min-width: $medium-breakpoint) {
                 padding: 123px 0 100px 0;   
             }
-            h2{
+            h2 {
                 margin-bottom: 28px;
             }
-            form{
+            form {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                input, textarea {
+                input, textarea  {
                     border: none;
                     border-radius: 28px;
                     width: min(1021px, 80vw);
                     padding-left: 38px;
                     padding-right: 28px;
                 }
-                input{
+                input {
                     height: 56px;
                 }
-                textarea{
+                textarea {
                     padding-top: 20px;                    
                     height: 210px;
-                    @media(min-width: $small-breakpoint){height: 160px;}
+                    @media(min-width: $small-breakpoint) {height: 160px;}
                     resize: none;
                 }
-                .btn-generic{
+                .btn-generic {
                     justify-content: center;
                     margin-top: 30px;
                 }
@@ -1204,85 +1263,87 @@ main {
         }
         
     }
-    .visit-map{
+    .visit-map {
         background-color: $black-bg;
         padding-bottom: 0;
     }
 }
-footer{
+footer {
     background-color: $black-bg;
-    .footer-top-wrp{
+        .footer-top-wrp {
         position: relative;
         padding-top: 50px;
         padding-bottom: 50px;
-        @media(min-width: $xlarge-breakpoint){
+        @media(min-width: $xlarge-breakpoint) {
             padding-top: 114px;
             padding-bottom: 80px;
         }
         border-bottom: 1px solid #3E404D;
-        .footer-top{
-            @media(min-width: $medium-breakpoint){padding: 0;}
+        .footer-top {
+            @media(min-width: $medium-breakpoint) {padding: 0;}
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            .company-presentation{
+            .company-presentation {
                 width: 95vw;
-                @media(min-width: $xlarge-breakpoint){
+                @media(min-width: $xlarge-breakpoint) {
                     width: 309px;
                 }
             }
-                img{
+                img {
                     margin-bottom: 30px;
                 }
-                p{
+                p {
                     color: $grey-font-color;
                     line-height: 26px;
                 }
-            .link-grid-card{
+            .link-grid-card {
                 width: 250px;
-                @media(min-width: $small-breakpoint){width: 180px;}
-                h6{
+                @media(min-width: $small-breakpoint) {width: 180px;}
+                h6 {
                     color: $white-font-color;
                     margin-bottom: 12px;
-                    @media(min-width: $medium-breakpoint){margin-bottom: 35px;}
+                    @media(min-width: $medium-breakpoint) {margin-bottom: 35px;}
                     margin-top: 18px;
                 }
-                a{
+                a {
                     display: block;
                     color: $grey-font-color;
                     text-decoration: none;
                     line-height: 40px;
+                    &:hover {color: $white-font-color}
                 }
             }
         }
-        .footer-squiggle{
+        .footer-squiggle {
             position: absolute;
             bottom: 0;
             right: 0;
-            img{
+            img {
                 opacity: 0.6;
             }
         }
     }
-    .footer-bottom{
+    .footer-bottom {
         display: flex; 
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 24px 12px;
-        @media(min-width: $medium-breakpoint){padding: 24px 0;}
+        @media(min-width: $medium-breakpoint) {padding: 24px 0;}
         line-height: 30px;
-        .copyright{
+        .copyright {
             color: $grey-font-color; 
         }
-        .somed{
+        .somed {
             order: -1;
-            @media(min-width: $medium-breakpoint){order: 0;}
-            a{
+            @media(min-width: $medium-breakpoint) {order: 0;}
+            a {
                 color: $white-font-color;
                 margin-left: 25px;
-                &.firstsomed{
+                &.firstsomed {
                     margin-left: 0;
                 }
+                &:hover {color: $hover-color;}
             }
         }
     }

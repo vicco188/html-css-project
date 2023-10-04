@@ -62,6 +62,10 @@ p {
   color: #5E5E5E;
 }
 
+a {
+  transition: all 0.25S;
+}
+
 ::placeholder {
   color: #8C8C8C;
 }
@@ -77,6 +81,7 @@ p {
   border-radius: 28px;
   font-weight: 600;
   font-size: 14px;
+  transition: all 0.3s;
 }
 @media (min-width: 768px) {
   .btn-generic {
@@ -259,6 +264,9 @@ header .header-wrp .header-bottom nav {
   justify-content: space-between;
   font-size: 16px;
   font-weight: 400;
+}
+header .header-wrp .header-bottom nav .current-nav {
+  font-weight: 500;
 }
 header .header-wrp .header-bottom nav .current-nav, header .header-wrp .header-bottom nav a:hover {
   position: relative;
@@ -454,9 +462,6 @@ main .projects .projects-wrp .projects-grid .projects-grid-card h6 {
     margin-bottom: 38px;
   }
 }
-main .projects .projects-wrp .projects-grid .projects-grid-card:hover .readmorelink, main .projects .projects-wrp .projects-grid .projects-grid-card:hover h6 {
-  color: #aaaaaa;
-}
 main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink {
   text-align: end;
   font-size: 14px;
@@ -465,6 +470,12 @@ main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink {
 }
 main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink i {
   margin-left: 5px;
+}
+main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink, main .projects .projects-wrp .projects-grid .projects-grid-card h6 {
+  transition: all 0.2s;
+}
+main .projects .projects-wrp .projects-grid .projects-grid-card:hover .readmorelink, main .projects .projects-wrp .projects-grid .projects-grid-card:hover h6 {
+  color: #aaaaaa;
 }
 main .projects .projects-wrp .projects-button {
   display: flex;
@@ -706,6 +717,7 @@ main .services .services-wrp .services-grid {
 }
 main .services .services-wrp .services-grid .info-card {
   background-color: #FFFFFF;
+  transition: background-color 0.4s ease-in-out;
   padding: 30px 30px;
 }
 main .services .services-wrp .services-grid .info-card:hover {
@@ -747,6 +759,7 @@ main .services .services-wrp .services-grid .info-card .service-button .btn-gene
   width: 56px;
   justify-content: center;
   padding: 2px 8px 0 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 main .services .services-wrp .services-grid .info-card .service-button .btn-white {
   border: none;
@@ -927,12 +940,19 @@ main .about .about-wrp .about-image {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  main .about .about-wrp .about-image {
+    overflow: visible;
+  }
+}
 @media (min-width: 992px) {
   main .about .about-wrp .about-image {
     justify-content: flex-start;
   }
 }
 main .about .about-wrp .about-image .quote-box {
+  z-index: 1;
+  box-shadow: -20px 30px 35px 0 rgba(0, 0, 0, 0.04);
   position: absolute;
   left: 0;
   bottom: 40px;
@@ -1191,6 +1211,9 @@ main .team .team-wrp .team-top .team-button .btn-yellow {
     margin-top: 50px;
   }
 }
+main .team .team-wrp .team-top .team-button .btn-yellow:hover {
+  border: none;
+}
 main .team .team-wrp .team-mid {
   max-height: 525px;
   overflow: hidden;
@@ -1285,11 +1308,20 @@ main .news .news-wrp .news-mid .news-card {
 main .news .news-wrp .news-mid .news-card:hover .article-intro, main .news .news-wrp .news-mid .news-card:hover .article-heading {
   color: #aaaaaa;
 }
+main .news .news-wrp .news-mid .news-card:hover .datebox {
+  background-color: #0E1021;
+}
+main .news .news-wrp .news-mid .news-card:hover .datebox p, main .news .news-wrp .news-mid .news-card:hover .datebox h6 {
+  color: #FFFFFF;
+}
 main .news .news-wrp .news-mid .news-card .article-heading {
   margin-bottom: 18px;
 }
 main .news .news-wrp .news-mid .news-card .article-intro {
   line-height: 28px;
+}
+main .news .news-wrp .news-mid .news-card .article-intro, main .news .news-wrp .news-mid .news-card .article-heading {
+  transition: color 0.2s;
 }
 main .news .news-wrp .news-mid .news-card img {
   margin-bottom: 24px;
@@ -1305,10 +1337,14 @@ main .news .news-wrp .news-mid .news-card .datebox {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease-in-out;
 }
 main .news .news-wrp .news-mid .news-card .datebox h6 {
   margin-bottom: -5px;
   margin-top: 21px;
+}
+main .news .news-wrp .news-mid .news-card .datebox h6, main .news .news-wrp .news-mid .news-card .datebox p {
+  transition: color 0.2s ease-in-out;
 }
 main .news .news-wrp .news-bottom {
   display: flex;
@@ -1413,6 +1449,8 @@ main .contact-info .contact-info-wrp {
   }
 }
 main .contact-info .contact-info-wrp .contact-card {
+  text-decoration: none;
+  color: #191919;
   border: 1px solid #D1D1D1;
   display: grid;
   grid-template-columns: 84px 1fr;
@@ -1420,6 +1458,10 @@ main .contact-info .contact-info-wrp .contact-card {
   padding-top: 48px;
   padding-bottom: 38px;
   padding-left: 14%;
+}
+main .contact-info .contact-info-wrp .contact-card:hover .contact-symbol {
+  animation: shakeMe 2s infinite;
+  box-shadow: 0 0 30px 0 rgb(191, 221, 255);
 }
 main .contact-info .contact-info-wrp .contact-card .contact-symbol {
   grid-area: symbol;
@@ -1432,6 +1474,33 @@ main .contact-info .contact-info-wrp .contact-card .contact-symbol {
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  transition: box-shadow 0.4s;
+}
+@keyframes shakeMe {
+  20% {
+    transform: rotate(0deg);
+  }
+  24% {
+    transform: rotate(30deg);
+  }
+  28% {
+    transform: rotate(-30deg);
+  }
+  32% {
+    transform: rotate(20deg);
+  }
+  36% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  44% {
+    transform: rotate(-10deg);
+  }
+  48% {
+    transform: rotate(0deg);
+  }
 }
 main .contact-info .contact-info-wrp .contact-card p {
   grid-area: txt;
@@ -1565,6 +1634,9 @@ footer .footer-top-wrp .footer-top .link-grid-card a {
   text-decoration: none;
   line-height: 40px;
 }
+footer .footer-top-wrp .footer-top .link-grid-card a:hover {
+  color: #FFFFFF;
+}
 footer .footer-top-wrp .footer-squiggle {
   position: absolute;
   bottom: 0;
@@ -1602,4 +1674,7 @@ footer .footer-bottom .somed a {
 }
 footer .footer-bottom .somed a.firstsomed {
   margin-left: 0;
+}
+footer .footer-bottom .somed a:hover {
+  color: #aaaaaa;
 }
