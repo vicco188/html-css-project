@@ -3,7 +3,7 @@ $medium-breakpoint: 768px;
 $large-breakpoint: 992px;
 $xlarge-breakpoint: 1200px;
 $xxlarge-breakpoint: 1400px;
-$hover-color: #aaaaaa;
+$hover-color: #AAAAAA;
 $grey-bg: #F0EFE9;
 $white-bg: #FFFFFF;
 $black-bg: #0E1021;
@@ -13,11 +13,14 @@ $dark-grey-font-color: #5E5E5E;
 $grey-font-color: #B6B6BC;
 $white-font-color: #FFFFFF;
 $grey-border: 2px solid #DAD9D3;
+
 *  {
     box-sizing:border-box; 
     // border:solid 1px;  //debug only
 }
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;900&family=Josefin+Sans:wght@300&display=swap');
+
 html, body  {
     color: $black-font-color;
     background-color: $grey-bg;
@@ -25,6 +28,7 @@ html, body  {
     font-size: 16px;
     font-weight: 400;
 }
+
 h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
@@ -64,9 +68,19 @@ p {
 a  {
     transition: all 0.25S;
 }
-
-::placeholder {
-    color: #8C8C8C;
+input {
+    height: 56px;
+}
+input, textarea{
+    outline: none;
+    border: none;
+    border-radius: 28px;
+    &:focus {
+        box-shadow: 5px 2px 20px 0 #00000017;
+    }
+    &::placeholder {
+        color: #8C8C8C;
+    }
 }
 
 .btn-generic {
@@ -89,7 +103,7 @@ a  {
     }
     &.btn-yellow  {
         background-color: #F9D783;
-        border: 1px solid #F9D783;
+        border: none;
     }
     &.btn-transparent  {
         background-color: transparent;
@@ -101,8 +115,8 @@ a  {
     }
     &.btn-black  {
         background-color: $black-font-color;
-        border: 1px solid $black-font-color;
         color: #FFFFFF;
+        border: none;
     }
     &.btn-white  {
         background-color: $white-font-color;
@@ -115,6 +129,7 @@ a  {
     }
     transition: all 0.3s;
 }
+
 .section-title {//h2+h4
     
     h4 {
@@ -122,6 +137,7 @@ a  {
         @media(min-width: $large-breakpoint) {margin-bottom:25px;}
     }
 }
+
 .info-card {
     padding-bottom: 0;
     p {
@@ -132,12 +148,14 @@ a  {
         margin-top: 23px;
     }
 }
+
 .wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
+
 header {
     background-color: $grey-bg;
     padding-bottom: 10px;
@@ -263,6 +281,7 @@ header {
         }
     }
 }
+
 main  {
     .intro-section {
         position: relative;
@@ -361,6 +380,7 @@ main  {
             width: min(836px, 70vw);
         }
     }
+    
     .projects {
         background-color: $white-bg;
         .projects-wrp {
@@ -425,6 +445,7 @@ main  {
             }
         }
     }
+    
     .brand-display {
         background-color: $white-bg;
         padding-top: 18px; padding-bottom: 18px;
@@ -450,6 +471,7 @@ main  {
             }
         }
     }
+    
     .features {
         background-color: $white-bg;
         .features-wrp {
@@ -535,6 +557,7 @@ main  {
             }
         }
     }
+    
     .services {
         background-color: $grey-bg;
         position: relative;
@@ -627,6 +650,7 @@ main  {
             @media(min-width: 300px) {display: block;}
         }
     }
+    
     .whychooseus {
         background-color: $white-bg;
         padding-top: 64px;
@@ -715,6 +739,7 @@ main  {
             @media(min-width: $xxlarge-breakpoint) {width: calc(50vw + 115px);}
         }
     }
+    
     .about {
         background-color: $white-bg;
         padding: 30px 0;
@@ -846,6 +871,7 @@ main  {
             }
         }
     }
+    
     .testimonials {
         background-color: $yellow-bg;
         padding-top: 50px; 
@@ -939,6 +965,7 @@ main  {
             }
         }
     }
+    
     .team {
         background-color: $yellow-bg;
         padding-top: 50px;
@@ -998,6 +1025,7 @@ main  {
             }
         }
     }
+    
     .news {
         background-color: white;
         padding-top: 50px;
@@ -1089,6 +1117,7 @@ main  {
             }
         }
     }
+    
     .newsletter {
         padding: 70px 0 70px 0;
         @media(min-width: $xxlarge-breakpoint) {padding-top: 107px;}
@@ -1106,24 +1135,20 @@ main  {
                 flex-direction: row;
                 padding: 0 50px 0 0;
             }
-            #frmNewsletter {
+            form {
                 display: flex;
                 flex-direction: column;
                 row-gap: 20px;
                 @media(min-width: $medium-breakpoint) {flex-direction: row;}
-                #tbxNewsletterEmail {
-                    border: none;
-                    height: 56px;
+                input[type="text"] {
                     width: 308px;
                     max-width:90vw;
                     padding-left: 35px;
                     padding-right: 22px;
-                    border-radius: 26px;
                     margin-right:16px;
                 }
-                #btnNewsletterSubscribe {
+                button {
                     max-width: 170px;
-                    // max-width:90vw;
                 }
             }
         }
@@ -1138,6 +1163,7 @@ main  {
             @media(min-width: $medium-breakpoint) {display: block;}
         }
     }
+    
     .contact-info {
         background-color: $white-bg;
         padding-top: 60px;
@@ -1218,13 +1244,13 @@ main  {
             }
         }
     }    
+    
     .contact-form {
         background-color: $white-bg;
         padding: 60px 0 0 0;
         @media(min-width: $medium-breakpoint) {padding: 84px 0 116px 0;}
         .contact-form-wrp {
-            background-color: $grey-bg;
-                     
+            background-color: $grey-bg;      
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1239,15 +1265,11 @@ main  {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                input, textarea  {
-                    border: none;
-                    border-radius: 28px;
-                    width: min(1021px, 80vw);
+                input[type="text"], input[type="email"], textarea  {
+                    width: calc(100vw - 60px);
+                    @media(min-width: $medium-breakpoint) {width: min(1021px, 70vw);}
                     padding-left: 38px;
                     padding-right: 28px;
-                }
-                input {
-                    height: 56px;
                 }
                 textarea {
                     padding-top: 20px;                    
@@ -1261,13 +1283,14 @@ main  {
                 }
             }
         }
-        
     }
+    
     .visit-map {
         background-color: $black-bg;
         padding-bottom: 0;
     }
 }
+
 footer {
     background-color: $black-bg;
         .footer-top-wrp {

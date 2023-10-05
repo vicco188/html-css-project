@@ -66,7 +66,19 @@ a {
   transition: all 0.25S;
 }
 
-::placeholder {
+input {
+  height: 56px;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  border-radius: 28px;
+}
+input:focus, textarea:focus {
+  box-shadow: 5px 2px 20px 0 rgba(0, 0, 0, 0.0901960784);
+}
+input::placeholder, textarea::placeholder {
   color: #8C8C8C;
 }
 
@@ -94,7 +106,7 @@ a {
 }
 .btn-generic.btn-yellow {
   background-color: #F9D783;
-  border: 1px solid #F9D783;
+  border: none;
 }
 .btn-generic.btn-transparent {
   background-color: transparent;
@@ -106,16 +118,16 @@ a {
 }
 .btn-generic.btn-black {
   background-color: #191919;
-  border: 1px solid #191919;
   color: #FFFFFF;
+  border: none;
 }
 .btn-generic.btn-white {
   background-color: #FFFFFF;
   border: 1px solid #191919;
 }
 .btn-generic:hover {
-  background-color: #aaaaaa;
-  border-color: #aaaaaa;
+  background-color: #AAAAAA;
+  border-color: #AAAAAA;
   color: #ffffff;
 }
 
@@ -217,7 +229,7 @@ header .header-wrp .header-top .header-top-contactinfo a {
   text-decoration: none;
 }
 header .header-wrp .header-top .header-top-contactinfo a:hover {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 header .header-wrp .header-top .header-top-contactinfo .header-top-contactinfo-contact {
   border-left: 2px solid #DAD9D3;
@@ -245,7 +257,7 @@ header .header-wrp .header-top .header-top-somedicons a {
   padding-left: 15px;
 }
 header .header-wrp .header-top .header-top-somedicons a:hover {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 header .header-wrp .header-bottom {
   display: none;
@@ -285,10 +297,10 @@ header .header-wrp .header-bottom nav a {
   text-decoration: none;
 }
 header .header-wrp .header-bottom nav a:hover {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 header .header-wrp .header-bottom nav a:hover::before {
-  border-bottom: 2px solid #aaaaaa;
+  border-bottom: 2px solid #AAAAAA;
 }
 
 main .intro-section {
@@ -390,7 +402,7 @@ main .intro-section .intro-section-wrp .page-heading nav a {
   color: #191919;
 }
 main .intro-section .intro-section-wrp .page-heading nav a:hover {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 main .intro-section .intro-section-wrp .page-heading nav span {
   font-weight: 500;
@@ -475,7 +487,7 @@ main .projects .projects-wrp .projects-grid .projects-grid-card .readmorelink, m
   transition: all 0.2s;
 }
 main .projects .projects-wrp .projects-grid .projects-grid-card:hover .readmorelink, main .projects .projects-wrp .projects-grid .projects-grid-card:hover h6 {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 main .projects .projects-wrp .projects-button {
   display: flex;
@@ -1306,7 +1318,7 @@ main .news .news-wrp .news-mid .news-card {
   position: relative;
 }
 main .news .news-wrp .news-mid .news-card:hover .article-intro, main .news .news-wrp .news-mid .news-card:hover .article-heading {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
 main .news .news-wrp .news-mid .news-card:hover .datebox {
   background-color: #0E1021;
@@ -1394,27 +1406,24 @@ main .newsletter .newsletter-wrp h2 {
     padding: 0 50px 0 0;
   }
 }
-main .newsletter .newsletter-wrp #frmNewsletter {
+main .newsletter .newsletter-wrp form {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 @media (min-width: 768px) {
-  main .newsletter .newsletter-wrp #frmNewsletter {
+  main .newsletter .newsletter-wrp form {
     flex-direction: row;
   }
 }
-main .newsletter .newsletter-wrp #frmNewsletter #tbxNewsletterEmail {
-  border: none;
-  height: 56px;
+main .newsletter .newsletter-wrp form input[type=text] {
   width: 308px;
   max-width: 90vw;
   padding-left: 35px;
   padding-right: 22px;
-  border-radius: 26px;
   margin-right: 16px;
 }
-main .newsletter .newsletter-wrp #frmNewsletter #btnNewsletterSubscribe {
+main .newsletter .newsletter-wrp form button {
   max-width: 170px;
 }
 main .newsletter .squiggle {
@@ -1541,15 +1550,15 @@ main .contact-form .contact-form-wrp form {
   flex-direction: column;
   gap: 16px;
 }
-main .contact-form .contact-form-wrp form input, main .contact-form .contact-form-wrp form textarea {
-  border: none;
-  border-radius: 28px;
-  width: min(1021px, 80vw);
+main .contact-form .contact-form-wrp form input[type=text], main .contact-form .contact-form-wrp form input[type=email], main .contact-form .contact-form-wrp form textarea {
+  width: calc(100vw - 60px);
   padding-left: 38px;
   padding-right: 28px;
 }
-main .contact-form .contact-form-wrp form input {
-  height: 56px;
+@media (min-width: 768px) {
+  main .contact-form .contact-form-wrp form input[type=text], main .contact-form .contact-form-wrp form input[type=email], main .contact-form .contact-form-wrp form textarea {
+    width: min(1021px, 70vw);
+  }
 }
 main .contact-form .contact-form-wrp form textarea {
   padding-top: 20px;
@@ -1676,5 +1685,5 @@ footer .footer-bottom .somed a.firstsomed {
   margin-left: 0;
 }
 footer .footer-bottom .somed a:hover {
-  color: #aaaaaa;
+  color: #AAAAAA;
 }
