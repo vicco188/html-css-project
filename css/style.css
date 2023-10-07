@@ -1106,7 +1106,7 @@ main .testimonials .testimonials-wrp .section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 86px;
+  margin-bottom: 80px;
 }
 main .testimonials .testimonials-wrp .testimonials-grid {
   display: grid;
@@ -1115,7 +1115,7 @@ main .testimonials .testimonials-wrp .testimonials-grid {
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 main .testimonials .testimonials-wrp .testimonials-grid .testimonial-card {
-  padding: 0 30px;
+  padding: 0 25px;
 }
 main .testimonials .testimonials-wrp .testimonials-grid .testimonial-card .rating {
   color: #F94D1C;
@@ -1127,7 +1127,7 @@ main .testimonials .testimonials-wrp .testimonials-grid .testimonial-card p {
   font-size: 18px;
   font-weight: 600;
   font-style: italic;
-  margin: 26px 0 34px;
+  margin: 16px 0 28px;
   line-height: 34px;
 }
 main .testimonials .testimonials-wrp .testimonials-grid .testimonial-card .testifier-byline {
